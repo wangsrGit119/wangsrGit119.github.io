@@ -8,22 +8,22 @@
   <link rel="dns-prefetch" href="">
   <title>猫君的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="index2.html 	                            .box{ 		width:600px; 		border:1px solid #ccff00; 		padding:10px; 		margin:10px;      }  .tab{  		  		border: 1px solid white;  		width: 550px; 		text-">
+  <meta name="description" content="index2.html 	                            .box{ 		width:800px; 		border:1px solid #ccff00; 		padding:10px; 		margin:10px;      }  .tab{  		  		border: 1px solid white;  		width: 750px; 		text-">
 <meta name="keywords" content="前端,js,jquery,javascript,html5,编程,代码,IT网站,html,css,css3,java">
 <meta property="og:type" content="website">
 <meta property="og:title" content="猫君的博客">
 <meta property="og:url" content="/photo/index.html">
 <meta property="og:site_name" content="猫君的博客">
-<meta property="og:description" content="index2.html 	                            .box{ 		width:600px; 		border:1px solid #ccff00; 		padding:10px; 		margin:10px;      }  .tab{  		  		border: 1px solid white;  		width: 550px; 		text-">
+<meta property="og:description" content="index2.html 	                            .box{ 		width:800px; 		border:1px solid #ccff00; 		padding:10px; 		margin:10px;      }  .tab{  		  		border: 1px solid white;  		width: 750px; 		text-">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="/photos/bg-1.jpg">
 <meta property="og:image" content="/photos/bg-2.jpg">
 <meta property="og:image" content="/photos/bg-3.jpg">
 <meta property="og:image" content="/photos/bg-4.jpg">
-<meta property="og:updated_time" content="2017-11-30T09:22:23.099Z">
+<meta property="og:updated_time" content="2017-11-30T09:45:59.642Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="猫君的博客">
-<meta name="twitter:description" content="index2.html 	                            .box{ 		width:600px; 		border:1px solid #ccff00; 		padding:10px; 		margin:10px;      }  .tab{  		  		border: 1px solid white;  		width: 550px; 		text-">
+<meta name="twitter:description" content="index2.html 	                            .box{ 		width:800px; 		border:1px solid #ccff00; 		padding:10px; 		margin:10px;      }  .tab{  		  		border: 1px solid white;  		width: 750px; 		text-">
 <meta name="twitter:image" content="/photos/bg-1.jpg">
   
   
@@ -197,7 +197,7 @@
 
 <style type="text/css">
 .box{
-		width:600px;
+		width:800px;
 		border:1px solid #ccff00;
 		padding:10px;
 		margin:10px;
@@ -206,12 +206,12 @@
  .tab{
  		
  		border: 1px solid white;
- 		width: 550px;
+ 		width: 750px;
 		text-align:center;
  		border-collapse: collapse;
  }
 .tab td{border: 1px solid white;}
-
+.tab td .btn1{width:70px;height:17px;}
 </style>
 
 
@@ -228,9 +228,9 @@ window.onload=function(){
 	var btn1=document.getElementById("btn1");
 	var arr=['../photos/bg-1.jpg','../photos/bg-2.jpg','../photos/bg-3.jpg','../photos/bg-4.jpg','../photos/bg-5.jpg','../photos/bg-6.jpg'];
 	var num1=0;
-	var num2=0;
-	var num3=0;
-	var num4=0;
+	var num2=1;
+	var num3=2;
+	var num4=3;
 	btn1.onclick=function(){
 		
 		num1++;
@@ -287,14 +287,14 @@ window.onload=function(){
     <td><a href="#">冬</a> </td>
 </tr>
 <tr>
-	<td><img id="img1" src="../photos/bg-1.jpg" width="100" height="80"></td>
-	<td><img id="img2" src="../photos/bg-2.jpg" width="100" height="80"></td>
-	<td><img id="img3" src="../photos/bg-3.jpg" width="100" height="80"></td>
-	<td><img id="img4" src="../photos/bg-4.jpg" width="100" height="80"></td>
+	<td><img id="img1" src="../photos/bg-1.jpg" width="150" height="100"></td>
+	<td><img id="img2" src="../photos/bg-2.jpg" width="150" height="100"></td>
+	<td><img id="img3" src="../photos/bg-3.jpg" width="150" height="100"></td>
+	<td><img id="img4" src="../photos/bg-4.jpg" width="150" height="100"></td>
 </tr>	
 
 <tr>
-	<td colspan="4"> <input id="btn1" type="button" value="点击切换"></td>
+	<td bgcolor="#cccccc" colspan="4"> <input id="btn1" type="button" value="点击切换"></td>
 </tr>
 
 </table> 
@@ -568,6 +568,14 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Jquery</a>
               </li>
              
@@ -580,42 +588,6 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">html</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">servlet</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">http协议</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Javaweb</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">IO</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">留言</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">javaweb</a>
               </li>
              
@@ -624,11 +596,39 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">http协议</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">servlet</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Javaweb</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">IO</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">域名</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">github</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">留言</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">html</a>
               </li>
             
             <div class="clearfix"></div>
