@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>猫君的博客</title>
+  
+  <subtitle>Promote yourself ,but do not demote another</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="/"/>
+  <updated>2017-11-16T14:04:15.532Z</updated>
+  <id>/</id>
+  
+  <author>
+    <name>小猫奴</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MVC开发备忘录</title>
+    <link href="/2017/11/16/MVC%E5%BC%80%E5%8F%91/"/>
+    <id>/2017/11/16/MVC开发/</id>
+    <published>2017-11-16T13:47:27.000Z</published>
+    <updated>2017-11-16T14:04:15.532Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li>以查询数据库学生信息为例</li></ul><blockquote><ul><li>cn.itcast.dao————数据处理实现类的接口</li><li>cn.itcast.dao.impl———数据数据包（包含所有的数据处理实现类）</li><li>cn.itcast.domain;———–实体（学生的基本信息 ，jsp页面显示所需要的数据（pagebean），查询结果）</li><li>cn.itcast.service;———-service层接口</li><li>cn.itcast.service.impl;——-数据交互（得到dao层查询数据，并赋予domain层（pagebean））</li><li>cn.itcast.controller;———得到service层返回的bean并将值封存在request域中，请求转发实现显示</li><li>cn.itcast.utils;————所需要的一些工具类，jdbc等。</li></ul></blockquote><ul><li><p><a href="http://pan.baidu.com/s/1hslaHbI" target="_blank" rel="external">代码下载</a></p></li><li><p><img src="/images/mvc.png" alt="Alt text"></p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ul&gt;
+&lt;li&gt;以查询数据库学生信息为例&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;cn.itcast.dao————数据处理实现类的接口&lt;/li&gt;
+&lt;li&gt;cn.itcast.dao.impl———数据数据包（包含所有的数据处理实现类）&lt;/li&gt;
+&lt;l
+      
+    
+    </summary>
+    
+    
+      <category term="javaweb" scheme="/tags/javaweb/"/>
+    
+      <category term="mvc" scheme="/tags/mvc/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>servlet--四大域</title>
+    <link href="/2017/10/27/%E5%9B%9B%E5%A4%A7%E5%9F%9F/"/>
+    <id>/2017/10/27/四大域/</id>
+    <published>2017-10-27T06:25:14.000Z</published>
+    <updated>2017-11-11T14:26:55.582Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="一、ServletContext域"><a href="#一、ServletContext域" class="headerlink" title="一、ServletContext域"></a>一、<code>ServletContext</code>域</h4><blockquote><ul><li>1、生命周期：当Web应用被加载进容器时创建代表整个web应用的ServletContext对象，当服务器关闭或Web应用被移除时，ServletContext对象跟着销毁。</li><li>2、作用范围：整个Web应用。</li></ul></blockquote><h4 id="二、Request域"><a href="#二、Request域" class="headerlink" title="二、Request域"></a>二、<code>Request</code>域</h4><blockquote><ul><li>1、生命周期：在service 方法调用前由服务器创建，传入service方法。整个请求<a id="more"></a>结束，request生命结束。</li><li>2、作用范围：整个请求链（请求转发也存在）。</li></ul></blockquote><h4 id="三、Session域"><a href="#三、Session域" class="headerlink" title="三、Session域"></a>三、<code>Session</code>域</h4><blockquote><ul><li>1.HttpSession 在服务器中，为浏览器创建独一无二的内存空间，在其中保存会话相关的信息。</li><li>2.生命周期：在第一次调yorequest.getSession() 方法时，服务器会检查是否已经有对应的session,如果没有就在内存 中创建一个session并返回。<br>注意：</li></ul></blockquote><ul><li>当一段时间内session没有被使用（默认为30分钟），则服务器会销毁该session。</li><li>如果服务器非正常关闭（强行关闭），没有到期的session也会跟着销毁。</li><li>如果调用session提供的invalidate（） ，可以立即销毁session。</li></ul><h4 id="四、PageContext-域"><a href="#四、PageContext-域" class="headerlink" title="四、PageContext 域"></a>四、<code>PageContext</code> 域</h4><blockquote><ul><li>1、生命周期：当对JSP的请求时开始，当响应结束时销毁。</li><li>2、作用范围：整个JSP页面，是四大作用域中最小的一个。</li></ul></blockquote><h4 id="本文作者：-猫君"><a href="#本文作者：-猫君" class="headerlink" title="本文作者： 猫君"></a>本文作者： 猫君</h4>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;一、ServletContext域&quot;&gt;&lt;a href=&quot;#一、ServletContext域&quot; class=&quot;headerlink&quot; title=&quot;一、ServletContext域&quot;&gt;&lt;/a&gt;一、&lt;code&gt;ServletContext&lt;/code&gt;域&lt;/h4&gt;&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;1、生命周期：当Web应用被加载进容器时创建代表整个web应用的ServletContext对象，当服务器关闭或Web应用被移除时，ServletContext对象跟着销毁。&lt;/li&gt;
+&lt;li&gt;2、作用范围：整个Web应用。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&quot;二、Request域&quot;&gt;&lt;a href=&quot;#二、Request域&quot; class=&quot;headerlink&quot; title=&quot;二、Request域&quot;&gt;&lt;/a&gt;二、&lt;code&gt;Request&lt;/code&gt;域&lt;/h4&gt;&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;1、生命周期：在service 方法调用前由服务器创建，传入service方法。整个请求
+    
+    </summary>
+    
+    
+      <category term="servlet" scheme="/tags/servlet/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>servlet-请求转发，重定向</title>
+    <link href="/2017/10/24/servlet-%E8%AF%B7%E6%B1%82%E8%BD%AC%E5%8F%91%EF%BC%8C%E9%87%8D%E5%AE%9A%E5%90%91/"/>
+    <id>/2017/10/24/servlet-请求转发，重定向/</id>
+    <published>2017-10-24T06:25:14.000Z</published>
+    <updated>2017-10-24T06:35:16.809Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="理解和应用"><a href="#理解和应用" class="headerlink" title="理解和应用"></a>理解和应用</h4><ul><li>请求转发：</li></ul><blockquote><p>浏览器将请求发送给servlet，servlet处理完成后,调用getRequestDispacther()方法:</p></blockquote><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">request.getRequestDispatcher(<span class="string">"/1.html"</span>).forward(request, response);</div></pre></td></tr></table></figure><blockquote><p>这个过程被称为一次请求转发，这个过程只涉及一次请求和转发,只有一次<a id="more"></a>请求和响应,转发只能在同一应用中使用.</p></blockquote><ul><li>重定向：<br>浏览器将请求发送给servlet，servlet处理完成后,调用sendRedirect()方法：</li></ul><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">response.sendRedirect(“page/index.jsp”)</div></pre></td></tr></table></figure><blockquote><p>重定向方法，要求浏览器重新发送一个请求去访问index.jsp页面。产生一个新的请求和响应。总之，重定向就是产生两次请求和响应</p></blockquote><h4 id="本文作者：-猫君"><a href="#本文作者：-猫君" class="headerlink" title="本文作者： 猫君"></a>本文作者： 猫君</h4>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;理解和应用&quot;&gt;&lt;a href=&quot;#理解和应用&quot; class=&quot;headerlink&quot; title=&quot;理解和应用&quot;&gt;&lt;/a&gt;理解和应用&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;请求转发：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;浏览器将请求发送给servlet，servlet处理完成后,调用getRequestDispacther()方法:&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;request.getRequestDispatcher(&lt;span class=&quot;string&quot;&gt;&quot;/1.html&quot;&lt;/span&gt;).forward(request, response);&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这个过程被称为一次请求转发，这个过程只涉及一次请求和转发,只有一次
+    
+    </summary>
+    
+    
+      <category term="servlet" scheme="/tags/servlet/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>getOutputStream与getWriter方法</title>
+    <link href="/2017/10/23/servlet-response/"/>
+    <id>/2017/10/23/servlet-response/</id>
+    <published>2017-10-23T09:12:46.000Z</published>
+    <updated>2017-10-23T09:47:49.638Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="理解"><a href="#理解" class="headerlink" title="理解"></a>理解</h4><blockquote><p>1.getOutputStream方法用于返回Servlet引擎创建的字节输出流对象，Servlet程序可以按字节形式输出响应正文。<br>2.getWriter方法用于返回Servlet引擎创建的字符输出流对象，Servlet程序可以按字符形式输出响应正文。<br>3.getOutputStream和getWriter这两个方法互相排斥，调用了其中的任何一个方法后，就不能再调用另一方法。<br>4.getOutputStream方法返回的字节输出流对象的类型为ServletOutputStream，它可以直接输出字节数组中的二进制数据<br>5.getWriter方法将Servlet引擎的数据缓冲区包装成PrintWriter类型的字符输出流对象后返回，PrintWriter对象可以直接输出字符文本内容。</p></blockquote><h4 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h4><a id="more"></a><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">response.getOutputStream().write(data.getBytes(<span class="string">"UTF-8"</span>));</div><div class="line">response.getWriter().write(data);</div></pre></td></tr></table></figure><h4 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">public <span class="keyword">void</span> doGet(HttpServletRequest request, HttpServletResponse response)</div><div class="line">throws ServletException, IOException &#123;</div><div class="line"></div><div class="line">response.setHeader(<span class="string">"refresh"</span>, <span class="string">"4"</span>);<span class="comment">//设置浏览器按时刷新</span></div><div class="line"></div><div class="line"><span class="built_in">String</span> data=<span class="keyword">new</span> Random().nextInt(<span class="number">100000</span>) + <span class="string">""</span>;</div><div class="line">response.getWriter().write(data);</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure><p>-<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">public <span class="keyword">void</span> doGet(HttpServletRequest request, HttpServletResponse response)</div><div class="line">throws ServletException, IOException &#123;</div><div class="line"></div><div class="line">response.setHeader(<span class="string">"refresh"</span>, <span class="string">"4"</span>);</div><div class="line"></div><div class="line"><span class="built_in">String</span> data=<span class="keyword">new</span> Random().nextInt(<span class="number">100000</span>) + <span class="string">""</span>;</div><div class="line">response.getOutputStream().write(data.getBytes());</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p><h4 id="本文作者：-猫君"><a href="#本文作者：-猫君" class="headerlink" title="本文作者： 猫君"></a>本文作者： 猫君</h4>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;理解&quot;&gt;&lt;a href=&quot;#理解&quot; class=&quot;headerlink&quot; title=&quot;理解&quot;&gt;&lt;/a&gt;理解&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;1.getOutputStream方法用于返回Servlet引擎创建的字节输出流对象，Servlet程序可以按字节形式输出响应正文。&lt;br&gt;2.getWriter方法用于返回Servlet引擎创建的字符输出流对象，Servlet程序可以按字符形式输出响应正文。&lt;br&gt;3.getOutputStream和getWriter这两个方法互相排斥，调用了其中的任何一个方法后，就不能再调用另一方法。&lt;br&gt;4.getOutputStream方法返回的字节输出流对象的类型为ServletOutputStream，它可以直接输出字节数组中的二进制数据&lt;br&gt;5.getWriter方法将Servlet引擎的数据缓冲区包装成PrintWriter类型的字符输出流对象后返回，PrintWriter对象可以直接输出字符文本内容。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&quot;应用&quot;&gt;&lt;a href=&quot;#应用&quot; class=&quot;headerlink&quot; title=&quot;应用&quot;&gt;&lt;/a&gt;应用&lt;/h4&gt;
+    
+    </summary>
+    
+    
+      <category term="servlet" scheme="/tags/servlet/"/>
+    
+      <category term="Javaweb" scheme="/tags/Javaweb/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>http协议</title>
+    <link href="/2017/10/20/http%E5%8D%8F%E8%AE%AE/"/>
+    <id>/2017/10/20/http协议/</id>
+    <published>2017-10-20T08:38:46.000Z</published>
+    <updated>2017-10-20T08:41:21.364Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="请求头："><a href="#请求头：" class="headerlink" title="请求头："></a>请求头：</h4><blockquote><p>Accept: text/html,image/*   用于告诉服务器客户机支持的数据类型<br>Accept-Charset:ISO-8895-1    告诉服务器 客户机采用的编码<br>Accept-Encoding:gzip,compress   告诉服务器 客户机支持的数据压缩格式<br>Accept-Language:en-us,zh-cn     客户机的语言环境<br>HOST: localhost:8080     告诉服务器 想访问的主机名<br>IF-Modirfied-Since:Tue,11,Jul 2000 18:23:51 GMT 告诉服务器 资源的缓存时间<br>Referer:<a href="http://localhost:8080/a/1.html" target="_blank" rel="external">http://localhost:8080/a/1.html</a>  告诉服务器他是从哪个资源访问的服务器<br>User-Agent:Mozilla/4/0  （compatible，MISE 5.5）告诉服务器 客户机的软件环境<br>Cookie：  可以向服务器带数据<br>Connection:close/keep-Alive<br>Date:Tue,11,Jul 2000 18:23:51 GMT   当前时间</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h4 id=&quot;请求头：&quot;&gt;&lt;a href=&quot;#请求头：&quot; class=&quot;headerlink&quot; title=&quot;请求头：&quot;&gt;&lt;/a&gt;请求头：&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;Accept: text/html,image/*   用于告诉服务器客户机支持的数据类型&lt;br&gt;
+      
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+      <category term="http协议" scheme="/tags/http%E5%8D%8F%E8%AE%AE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>反射类的构造函数</title>
+    <link href="/2017/10/16/%E5%8F%8D%E5%B0%84%E7%B1%BB%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0/"/>
+    <id>/2017/10/16/反射类构造函数/</id>
+    <published>2017-10-16T10:04:57.000Z</published>
+    <updated>2017-10-16T10:14:29.553Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h3><ul><li>在java中私有类的方法访问被外界访问时会被限制，但是用反射类构造函数创建对象访问时可以越过此障碍。</li><li>一般访问公共构造函数可以直接new ###()</li></ul><h3 id="实例-访问私有构造函数"><a href="#实例-访问私有构造函数" class="headerlink" title="实例(访问私有构造函数)"></a>实例(访问私有构造函数)</h3><p>//暴力反射</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">public void Reflect() throws ClassNotFoundException, SecurityException, NoSuchMethodException, IllegalArgumentException, InstantiationException, IllegalAccessException, InvocationTargetException&#123;</div><div class="line">Class clazz=Class.forName(&quot;cn.itcast.reflect.First&quot;);</div><div class="line">Constructor c=clazz.getDeclaredConstructor(null);</div><div class="line">c.setAccessible(true);</div><div class="line"> First p=(First) c.newInstance(null);</div><div class="line"> </div><div class="line"> </div><div class="line">&#125;</div></pre></td></tr></table></figure><h4 id="本文作者：-猫君"><a href="#本文作者：-猫君" class="headerlink" title="本文作者： 猫君"></a>本文作者： 猫君</h4>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;引入&quot;&gt;&lt;a href=&quot;#引入&quot; class=&quot;headerlink&quot; title=&quot;引入&quot;&gt;&lt;/a&gt;引入&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;在java中私有类的方法访问被外界访问时会被限制，但是用反射类构造函数创建对象访问时可以越过此障碍。&lt;/li&gt;
+&lt;li&gt;一般访问
+      
+    
+    </summary>
+    
+    
+      <category term="Javaweb" scheme="/tags/Javaweb/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CSS线性渐变</title>
+    <link href="/2017/10/15/CSS%E7%BA%BF%E6%80%A7%E6%B8%90%E5%8F%98/"/>
+    <id>/2017/10/15/CSS线性渐变/</id>
+    <published>2017-10-15T02:07:37.000Z</published>
+    <updated>2017-10-15T02:24:53.358Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="什么是CSS线性渐变"><a href="#什么是CSS线性渐变" class="headerlink" title="什么是CSS线性渐变"></a>什么是CSS线性渐变</h2><h3 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h3><blockquote><p>WebKit 是一个开源的浏览器引擎，基于此内核实现线性渐变在的应用<br>WebKit的优势在于高效稳定，兼容性好，且源码结构清晰，易于维护。</p></blockquote><h3 id="在WebKit下的实现实例"><a href="#在WebKit下的实现实例" class="headerlink" title="在WebKit下的实现实例"></a>在WebKit下的实现实例</h3><ul><li>代码<a id="more"></a></li></ul><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">&lt;!doctype html&gt;</div><div class="line">&lt;html lang=<span class="string">"en"</span>&gt;</div><div class="line"> &lt;head&gt;</div><div class="line">  &lt;meta http-equiv=<span class="string">"Content-Type"</span> content=<span class="string">"type/html"</span> charset=<span class="string">"UTF-8"</span>&gt;</div><div class="line">  &lt;title&gt;Document&lt;<span class="regexp">/title&gt;</span></div><div class="line"><span class="regexp">&lt;style type="text/</span>CSS<span class="string">"&gt;</span></div><div class="line"><span class="string">html body,a,ul,ol,li&#123;margin:0px;padding:0px;&#125;</span></div><div class="line"><span class="string">ul,ol&#123;list-style:none;&#125;</span></div><div class="line"><span class="string">.box .header&#123;</span></div><div class="line"><span class="string">height:90px;</span></div><div class="line"><span class="string">background: -webkit-linear-gradient(left, #ffff00, #cc3300);</span></div><div class="line"><span class="string">margin-bottom:10px;</span></div><div class="line"><span class="string">&#125;</span></div><div class="line"><span class="string">&lt;/style&gt;</span></div><div class="line"><span class="string"> &lt;/head&gt;</span></div><div class="line"><span class="string"> &lt;body&gt;</span></div><div class="line"><span class="string">  &lt;div class="</span>box<span class="string">"&gt;</span></div><div class="line"><span class="string">  &lt;div class="</span>header<span class="string">"&gt;&lt;/div&gt;</span></div><div class="line"><span class="string">  &lt;/div &gt;</span></div><div class="line"><span class="string"> &lt;/body&gt;</span></div><div class="line"><span class="string">&lt;/html&gt;</span></div></pre></td></tr></table></figure><ul><li>效果</li><li><img src="/images/3.png" alt="Alt text"></li></ul><h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">-webkit-linear-gradient( [&lt;point&gt; || &lt;angle&gt;,]? &lt;stop&gt;, &lt;stop&gt; [, &lt;stop&gt;]* )//最新发布书写语法</div><div class="line">-webkit-gradient(&lt;type&gt;, &lt;point&gt; [, &lt;radius&gt;]?, &lt;point&gt; [, &lt;radius&gt;]? [, &lt;stop&gt;]*) //老式语法书写规则</div></pre></td></tr></table></figure><ul><li><p>老式语法实例</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">background: -webkit-gradient(linear,center top,center bottom,from(#ccc), to(#000));</div></pre></td></tr></table></figure></li><li><p>新式语法实例</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">background:-webkit-linear-gradient(top,#ccc,#000);//top为起始位置</div></pre></td></tr></table></figure></li><li><p>同样的效果如下</p></li><li><img src="/images/5.png" alt="Alt text"></li></ul><h4 id="本文作者：-猫君"><a href="#本文作者：-猫君" class="headerlink" title="本文作者： 猫君"></a>本文作者： 猫君</h4>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;什么是CSS线性渐变&quot;&gt;&lt;a href=&quot;#什么是CSS线性渐变&quot; class=&quot;headerlink&quot; title=&quot;什么是CSS线性渐变&quot;&gt;&lt;/a&gt;什么是CSS线性渐变&lt;/h2&gt;&lt;h3 id=&quot;扩展&quot;&gt;&lt;a href=&quot;#扩展&quot; class=&quot;headerlink&quot; title=&quot;扩展&quot;&gt;&lt;/a&gt;扩展&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;WebKit 是一个开源的浏览器引擎，基于此内核实现线性渐变在的应用&lt;br&gt;WebKit的优势在于高效稳定，兼容性好，且源码结构清晰，易于维护。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;在WebKit下的实现实例&quot;&gt;&lt;a href=&quot;#在WebKit下的实现实例&quot; class=&quot;headerlink&quot; title=&quot;在WebKit下的实现实例&quot;&gt;&lt;/a&gt;在WebKit下的实现实例&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;代码
+    
+    </summary>
+    
+    
+      <category term="CSS" scheme="/tags/CSS/"/>
+    
+      <category term="html" scheme="/tags/html/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>字节流与字符流</title>
+    <link href="/2017/10/13/%E5%AD%97%E8%8A%82%E6%B5%81%E4%B8%8E%E5%AD%97%E7%AC%A6%E6%B5%81/"/>
+    <id>/2017/10/13/字节流与字符流/</id>
+    <published>2017-10-13T10:20:25.000Z</published>
+    <updated>2017-10-14T07:21:07.744Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="理解"><a href="#理解" class="headerlink" title="理解"></a>理解</h2><h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><blockquote><p>在java.io包中操作文件内容的主要有两大类：字节流、字符流，两类都分为输入和输出操作。在字节流中输出数据主要是使用<code>OutputStream</code>完成，输入使的是<code>InputStream</code>，在字符流中输出主要是使用<code>Writer</code>类完成，输入流主要使用<code>Reader</code>类完成。（这四个都是抽象类）<br> <code>Reader</code>和 <code>Writer</code>两个是为字符流（一个字符占两个字节）设计的,主要用来处理字符或字符串.</p><h3 id="应用差异"><a href="#应用差异" class="headerlink" title="应用差异"></a>应用差异</h3><ul><li>字符流是由Java虚拟机将字节转化为2个字节为单位的字符而成的，如果是音频文件、图片、歌曲，就用字节流好点，如果是关系到中文（文本）的，用字符流好点；</li><li>用字节流读取中文的时候，可能会出现乱码，而用字符流则不会出现乱码，而且用字符流读取的速度比字节流要快.<a id="more"></a><h2 id="字节流"><a href="#字节流" class="headerlink" title="字节流"></a>字节流</h2><h3 id="输入字节流："><a href="#输入字节流：" class="headerlink" title="输入字节流："></a>输入字节流：</h3></li><li><code>InputStream</code>  所有输入字节流的基类  抽象类</li><li><code>FileInputStream</code> 读取文件数据的输入字节流</li><li><code>BufferedInputStream</code>  缓冲输入字符流     <ul><li><code>FileInputStream</code>是字节流,<code>BufferedInputStream</code>是字节缓冲流，使用<code>BufferedInputStream</code>读资源比<code>FileInputStream</code>读取资源的效率高（<code>BufferedInputStream</code>的<code>read</code>方法会读取尽可能多的字节）,且<code>FileInputStream</code>对象的<code>read</code>方法会出现阻塞.</li></ul></li></ul></blockquote><h3 id="输出字节流："><a href="#输出字节流：" class="headerlink" title="输出字节流："></a>输出字节流：</h3><blockquote><ul><li><code>OutputStream</code> 所有输出字节流的基类。  抽象类。</li><li><code>FileOutputStream</code> 向文件输出数据的输出字节流  </li><li><code>BufferedOutputStream</code> 缓冲输出字节流</li></ul></blockquote><h2 id="字符流"><a href="#字符流" class="headerlink" title="字符流"></a>字符流</h2><h3 id="输入字符流"><a href="#输入字符流" class="headerlink" title="输入字符流:"></a>输入字符流:</h3><blockquote><ul><li><code>Reader</code>   所有输入字符流的基类。  抽象类。</li><li><code>FileReader</code> 读取文件数据的输入字符流。 </li><li><code>BufferedReader</code> 缓冲输入字符流  </li></ul></blockquote><h3 id="输出字符流"><a href="#输出字符流" class="headerlink" title="输出字符流:"></a>输出字符流:</h3><blockquote><ul><li><code>Writer</code> 所有输出字符流的基类。  抽象类</li><li><code>FileWriter</code>向文件输出数据的输出字符流  </li><li><code>BufferedWriter</code> 缓冲输出字符流</li></ul></blockquote><h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><ul><li>用<code>FileInputStream</code>读取</li></ul><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">public static void Read4() throws IOException&#123;</div><div class="line">File file=new File(<span class="string">"E:\\myeclipse\\a.txt"</span>);</div><div class="line">FileInputStream fileInputStream=new FileInputStream(file);</div><div class="line">int length=<span class="number">0</span>;</div><div class="line">byte[] buf=new byte[<span class="number">1024</span>];</div><div class="line"><span class="keyword">while</span>((length=fileInputStream.read(buf))!=<span class="number">-1</span>)&#123;</div><div class="line">System.out.print(<span class="string">"4"</span>+new String(buf, <span class="number">0</span>, length));</div><div class="line">&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure><ul><li>用<code>BufferedInputStream</code>读取</li></ul><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">public static void Read1() throws IOException&#123;//字节流读入</div><div class="line">File file=new File(<span class="string">"E:\\myeclipse\\a.txt"</span>);</div><div class="line">FileInputStream fileInputStream=new FileInputStream(file);</div><div class="line">BufferedInputStream bufferedInputStream=new BufferedInputStream(fileInputStream);//没发现扩展的内容</div><div class="line">int length=<span class="number">0</span>;</div><div class="line">byte[] buf=new byte[<span class="number">1024</span>];</div><div class="line"><span class="keyword">while</span>((length=bufferedInputStream.read(buf))!=<span class="number">-1</span>)&#123;</div><div class="line">System.out.println(<span class="string">"1"</span>+new String(buf,<span class="number">0</span>,length));</div><div class="line">&#125;</div></pre></td></tr></table></figure><ul><li>用<code>FileReader</code>读取</li></ul><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">public static void Read3() throws IOException&#123;</div><div class="line">File file=new File(<span class="string">"E:\\myeclipse\\a.txt"</span>);</div><div class="line">FileReader fileReader=new FileReader(file);</div><div class="line">int length=<span class="number">0</span>;</div><div class="line">char[] buf=new char[<span class="number">1024</span>];</div><div class="line"><span class="keyword">while</span>((length=fileReader.read(buf))!=<span class="number">-1</span>)&#123;</div><div class="line">System.out.print(<span class="string">"3"</span>+new String(buf, <span class="number">0</span>, length));</div><div class="line">&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure><ul><li>用<code>BufferedReader</code>读取</li></ul><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">public static void Read2() throws IOException&#123;//字符流读入</div><div class="line">File file=new File(<span class="string">"E:\\myeclipse\\a.txt"</span>);</div><div class="line">FileReader fileReader=new FileReader(file);</div><div class="line">BufferedReader bufferedReader=new BufferedReader(fileReader);</div><div class="line">String line = null;</div><div class="line"><span class="keyword">while</span>((line = bufferedReader.readLine())!=null)&#123;</div><div class="line">System.out.println(<span class="string">"2"</span>+line);</div><div class="line">&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure><h4 id="本文作者：-猫君"><a href="#本文作者：-猫君" class="headerlink" title="本文作者： 猫君"></a>本文作者： 猫君</h4>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;理解&quot;&gt;&lt;a href=&quot;#理解&quot; class=&quot;headerlink&quot; title=&quot;理解&quot;&gt;&lt;/a&gt;理解&lt;/h2&gt;&lt;h3 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;在java.io包中操作文件内容的主要有两大类：字节流、字符流，两类都分为输入和输出操作。在字节流中输出数据主要是使用&lt;code&gt;OutputStream&lt;/code&gt;完成，输入使的是&lt;code&gt;InputStream&lt;/code&gt;，在字符流中输出主要是使用&lt;code&gt;Writer&lt;/code&gt;类完成，输入流主要使用&lt;code&gt;Reader&lt;/code&gt;类完成。（这四个都是抽象类）&lt;br&gt; &lt;code&gt;Reader&lt;/code&gt;和 &lt;code&gt;Writer&lt;/code&gt;两个是为字符流（一个字符占两个字节）设计的,主要用来处理字符或字符串.&lt;/p&gt;
+&lt;h3 id=&quot;应用差异&quot;&gt;&lt;a href=&quot;#应用差异&quot; class=&quot;headerlink&quot; title=&quot;应用差异&quot;&gt;&lt;/a&gt;应用差异&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;字符流是由Java虚拟机将字节转化为2个字节为单位的字符而成的，如果是音频文件、图片、歌曲，就用字节流好点，如果是关系到中文（文本）的，用字符流好点；&lt;/li&gt;
+&lt;li&gt;用字节流读取中文的时候，可能会出现乱码，而用字符流则不会出现乱码，而且用字符流读取的速度比字节流要快.
+    
+    </summary>
+    
+    
+      <category term="Java" scheme="/tags/Java/"/>
+    
+      <category term="IO" scheme="/tags/IO/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Jq微博小案例</title>
+    <link href="/2017/10/09/Jq%E5%BE%AE%E5%8D%9A%E5%B0%8F%E6%A1%88%E4%BE%8B/"/>
+    <id>/2017/10/09/Jq微博小案例/</id>
+    <published>2017-10-09T11:10:55.000Z</published>
+    <updated>2017-10-10T07:10:41.063Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="利用html，CSS，Jq实现内容提交"><a href="#利用html，CSS，Jq实现内容提交" class="headerlink" title="利用html，CSS，Jq实现内容提交"></a>利用html，CSS，Jq实现内容提交</h4><ul><li>Jq获取文本域的值</li></ul><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">'textarea'</span>).val();</div></pre></td></tr></table></figure><ul><li>设置初始值为空</li></ul><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">'textarea'</span>).val(<span class="string">''</span>);</div></pre></td></tr></table></figure><ul><li>去掉前后空格</li></ul><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$.trim($(<span class="string">'textarea'</span>).val());</div></pre></td></tr></table></figure><ul><li>小案例</li></ul><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line">&lt;!doctype html&gt;</div><div class="line">&lt;html lang=<span class="string">"en"</span>&gt;</div><div class="line"> &lt;head&gt;</div><div class="line">  &lt;meta http-equiv=<span class="string">"Content-Type"</span> content=<span class="string">"text/html"</span>;charset=<span class="string">"UTF-8"</span>&gt;</div><div class="line">  &lt;title&gt;Document&lt;/title&gt;</div><div class="line">&lt;style type=<span class="string">"text/CSS"</span>&gt;</div><div class="line">* &#123;margin: <span class="number">0</span>px; padding: <span class="number">0</span>px; list-style: none;&#125;</div><div class="line">.con &#123;padding: <span class="number">10</span>px; width: <span class="number">600</span>px; margin: <span class="number">100</span>px auto; border:<span class="number">1</span>px solid <span class="comment">#000&#125;</span></div><div class="line">textarea &#123;width:<span class="number">460</span>px; height:<span class="number">160</span>px;resize:none;&#125;</div><div class="line">.con ul li &#123;border-bottom: <span class="number">1</span>px dashed <span class="comment">#ccc; line-height:32px;&#125;</span></div><div class="line">.con ul&#123;width:<span class="number">500</span>px;margin:<span class="number">0</span>px auto;&#125;</div><div class="line">&lt;/style&gt;</div><div class="line">&lt;script type="text/javascript" src="jquery-3.1.1.min.js"&gt;&lt;/script&gt;</div><div class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</div><div class="line">$(function()&#123;</div><div class="line">$(<span class="string">'button'</span>).click(function()&#123;</div><div class="line">var myvalue=$.trim($(<span class="string">'textarea'</span>).val());//获取文本框的值并且去掉前后的空格</div><div class="line"><span class="keyword">if</span>(myvalue==<span class="string">''</span>)&#123;</div><div class="line">alert(<span class="string">'内容不能为空'</span>);</div><div class="line">$(<span class="string">'textarea'</span>).val(<span class="string">''</span>);//为了清除之前的空格</div><div class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(myvalue.length&gt;<span class="number">120</span>)&#123;</div><div class="line">alert(<span class="string">"内容不能超过120个字"</span>);</div><div class="line">&#125;<span class="keyword">else</span>&#123;</div><div class="line">var myTag=$(<span class="string">'&lt;li&gt; '</span>+myvalue+<span class="string">' &lt;/li&gt;'</span>);</div><div class="line">$(<span class="string">'.con ul'</span>).prepend(myTag);</div><div class="line">$(<span class="string">'.con ul li:first'</span>).hide().slideDown();</div><div class="line">$(<span class="string">'textarea'</span>).val(<span class="string">''</span>);</div><div class="line">&#125;</div><div class="line">&#125;)</div><div class="line">&#125;)</div><div class="line">&lt;/script&gt;</div><div class="line"> &lt;/head&gt;</div><div class="line"> &lt;body&gt;</div><div class="line">&lt;div class="con"&gt;</div><div class="line">微博内容：&lt;textarea &gt;&lt;/textarea&gt; &lt;button&gt;发布&lt;/button&gt;&lt;br /&gt;</div><div class="line">&lt;ul&gt;</div><div class="line">&lt;/ul&gt;</div><div class="line">&lt;/div&gt;</div><div class="line"> &lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure><h4 id="本文作者：-猫君"><a href="#本文作者：-猫君" class="headerlink" title="本文作者： 猫君"></a>本文作者： 猫君</h4>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h4 id=&quot;利用html，CSS，Jq实现内容提交&quot;&gt;&lt;a href=&quot;#利用html，CSS，Jq实现内容提交&quot; class=&quot;headerlink&quot; title=&quot;利用html，CSS，Jq实现内容提交&quot;&gt;&lt;/a&gt;利用html，CSS，Jq实现内容提交&lt;/h4&gt;&lt;ul&gt;
+
+      
+    
+    </summary>
+    
+    
+      <category term="Jquery" scheme="/tags/Jquery/"/>
+    
+      <category term="Html" scheme="/tags/Html/"/>
+    
+      <category term="CSS" scheme="/tags/CSS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>电脑输入法桌面上不存在时解决办法</title>
+    <link href="/2017/10/09/%E7%94%B5%E8%84%91%E8%BE%93%E5%85%A5%E6%B3%95%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8/"/>
+    <id>/2017/10/09/电脑输入法无法启动/</id>
+    <published>2017-10-09T03:03:32.000Z</published>
+    <updated>2017-10-09T03:02:23.949Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li>1.快捷键CTRL+SHIFT或CTRL+Space</li><li>2.右击任务栏&gt;工具栏&gt;语言栏</li><li>3.运行 C:\Windows\System32\ctfmon.exe</li><li>4.控制面板&gt;区域和语言&gt;</li><li>5.regsvr32 msutb.dll</li><li>6.将 C:\Windows\System32\ctfmon.exe 加入注册- 表启动项或启动文件夹。</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ul&gt;
+&lt;li&gt;1.快捷键CTRL+SHIFT或CTRL+Space&lt;/li&gt;
+&lt;li&gt;2.右击任务栏&amp;gt;工具栏&amp;gt;语言栏&lt;/li&gt;
+&lt;li&gt;3.运行 C:\Windows\System32\ctfmon.exe&lt;/li&gt;
+&lt;li&gt;4.控制面板&amp;gt;区域和语言&amp;gt;
+      
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>IO流与文件读取</title>
+    <link href="/2017/10/08/IO%E6%B5%81%E4%B8%8E%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96/"/>
+    <id>/2017/10/08/IO流与文件读取/</id>
+    <published>2017-10-08T11:17:11.000Z</published>
+    <updated>2017-10-08T11:29:50.284Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="在这里提供两种导入方式"><a href="#在这里提供两种导入方式" class="headerlink" title="在这里提供两种导入方式"></a>在这里提供两种导入方式</h3><ul><li>第一种对于读取数字和字母读取有效，但是当读取文本是会无法识别</li></ul><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">public <span class="keyword">static</span> <span class="keyword">void</span> redTest2() throws IOException &#123;<span class="comment">// 这种读取在读取文字时无法识别</span></div><div class="line">long startTime = System.currentTimeMillis();</div><div class="line"><span class="comment">// 1 找到目标文件</span></div><div class="line">File file = <span class="keyword">new</span> File(<span class="string">"E:\\myeclipse\\img\\2.jpg"</span>);</div><div class="line"><span class="comment">// 2 建立传输通道</span></div><div class="line">FileInputStream fileInputStream = <span class="keyword">new</span> FileInputStream(file);</div><div class="line"><span class="comment">// 3 读取文件中的数据</span></div><div class="line">int content = <span class="number">0</span>;</div><div class="line"><span class="keyword">while</span> ((content = fileInputStream.read()) != <span class="number">-1</span>) &#123;</div><div class="line"><span class="comment">//System.out.print((char) content);</span></div><div class="line">&#125;</div><div class="line"><span class="comment">// 4 关闭通道</span></div><div class="line">fileInputStream.close();</div><div class="line">long stopTime = System.currentTimeMillis();</div><div class="line"><span class="comment">// 测试读取时间</span></div><div class="line">System.out.print(<span class="string">"1总时长："</span> + (stopTime - startTime));</div><div class="line">&#125;</div></pre></td></tr></table></figure><ul><li>第二种是针对读取文本、数字、字母或者其他多种数据的一种效率较高的读取方法<ul><li>使用缓冲数组配合循环读取</li></ul></li></ul><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">public <span class="keyword">static</span> <span class="keyword">void</span> redTest3() throws IOException &#123;<span class="comment">// 使用缓冲数组配合循环读取</span></div><div class="line">long startTime = System.currentTimeMillis();</div><div class="line"><span class="comment">// 1 找到目标文件</span></div><div class="line">File file = <span class="keyword">new</span> File(<span class="string">"E:\\myeclipse\\img\\2.jpg"</span>);</div><div class="line"><span class="comment">// 2 建立传输通道</span></div><div class="line">FileInputStream fileInputStream = <span class="keyword">new</span> FileInputStream(file);</div><div class="line"><span class="comment">// 3 建立缓冲数组配合循环读取文件中的数据</span></div><div class="line"></div><div class="line">int length = <span class="number">0</span>;</div><div class="line">byte[] buf = <span class="keyword">new</span> byte[<span class="number">1024</span>];</div><div class="line"><span class="keyword">while</span> ((length = fileInputStream.read(buf)) != <span class="number">-1</span>) &#123;</div><div class="line"><span class="comment">//System.out.print(new String(buf, 0, length));</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 4 关闭通道</span></div><div class="line">fileInputStream.close();</div><div class="line">long stopTime = System.currentTimeMillis();</div><div class="line">System.out.print(<span class="string">"2总时长："</span> + (stopTime - startTime));</div><div class="line">&#125;</div></pre></td></tr></table></figure><h4 id="本文作者：-猫君"><a href="#本文作者：-猫君" class="headerlink" title="本文作者： 猫君"></a>本文作者： 猫君</h4>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;在这里提供两种导入方式&quot;&gt;&lt;a href=&quot;#在这里提供两种导入方式&quot; class=&quot;headerlink&quot; title=&quot;在这里提供两种导入方式&quot;&gt;&lt;/a&gt;在这里提供两种导入方式&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;第一种对于读取数字和字母读取有效，但是当读取文本是会无法
+      
+    
+    </summary>
+    
+    
+      <category term="Java" scheme="/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>可变参数与增强for循环</title>
+    <link href="/2017/10/07/%E5%8F%AF%E5%8F%98%E5%8F%82%E6%95%B0%E4%B8%8E%E5%A2%9E%E5%BC%BAfor%E5%BE%AA%E7%8E%AF/"/>
+    <id>/2017/10/07/可变参数与增强for循环/</id>
+    <published>2017-10-07T06:17:11.000Z</published>
+    <updated>2017-10-11T15:10:07.798Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h4><ul><li>jdk1.5出现的新特性—-&gt;增强for循环</li></ul><blockquote><ul><li><p>增强for循环的作用： 简化迭代器的书写格式。(注意：增强for循环的底层还是使用了迭代器遍历。)</p></li><li><p>增强for循环的适用范围： 如果是实现了Iterable接口的对象或者是数组对象都可以使用增强for循环。</p></li><li><p>增强for循环的格式：</p></li></ul></blockquote><pre><code>for(数据类型  变量名  :遍历的目标){}</code></pre><ul><li>可变参数</li></ul><blockquote><ul><li>可变参数必须位于形参中的最后一个参数。</li><li>一个函数最多只能有一个可变 参数，因为可变参数要位于形参中最后一个位置上。</li></ul></blockquote><ul><li>通过一个简单的小例子说明可变参数与增强for循环的使用</li></ul><blockquote><ul><li>计算几个数的加和（任意的个数且用一个函数解决）</li></ul></blockquote><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">public class Demo3 &#123;</div><div class="line">public static void main(String[] args)&#123;</div><div class="line"></div><div class="line">add(<span class="string">"哈哈"</span>,<span class="number">1</span>,<span class="number">3</span>,<span class="number">4</span>);//可以添加任意个数</div><div class="line">&#125;</div><div class="line">public static void add(String m,int... arr)&#123;</div><div class="line">int result=<span class="number">0</span>;</div><div class="line"><span class="keyword">for</span>(int item:arr)&#123;//增强<span class="keyword">for</span>循环<span class="keyword">for</span>(数据类型  变量名  ：数组)&#123;&#125;</div><div class="line">result+=item;</div><div class="line">&#125;</div><div class="line">System.out.println(result);</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure><ul><li>注意：<ol><li>增强for循环底层也是使用了迭代器获取的，只不过获取迭代器由jvm完成，不需要我们获取迭代器而已，所以在使用增强for循环变量元素的过程中不准使用集合<br>对象对集合的元素个数进行修改。</li><li>迭代器遍历元素与增强for循环变量元素的区别：使用迭代器遍历集合的元素时可以删除集合的元素，而增强for循环变量集合的元素时，不能调用迭代器的remove方法删除元素。</li><li>普通for循环与增强for循环的区别：普通for循环可以没有变量的目标，而增强for循环一定要有变量的目标。</li></ol></li></ul><h4 id="本文作者：-猫君"><a href="#本文作者：-猫君" class="headerlink" title="本文作者： 猫君"></a>本文作者： 猫君</h4>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h4 id=&quot;知识点&quot;&gt;&lt;a href=&quot;#知识点&quot; class=&quot;headerlink&quot; title=&quot;知识点&quot;&gt;&lt;/a&gt;知识点&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;jdk1.5出现的新特性—-&amp;gt;增强for循环&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;
+      
+    
+    </summary>
+    
+    
+      <category term="Java" scheme="/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo yilia主题 来比力评论的引入</title>
+    <link href="/2017/10/01/%E6%9D%A5%E6%AF%94%E5%8A%9B%E8%AF%84%E8%AE%BA%E7%9A%84%E5%BC%95%E5%85%A5/"/>
+    <id>/2017/10/01/来比力评论的引入/</id>
+    <published>2017-10-01T01:29:32.000Z</published>
+    <updated>2017-10-11T15:08:48.054Z</updated>
+    
+    <content type="html"><![CDATA[<p> 在上一篇提到了友言评论存在一定的问题，而且在得到评论后不能接收提醒，因此在本文将换一种评论，即来比力，具体过程见下。</p><blockquote><ul><li>受先来到来比力官网注册，管理页面 -&gt; 代码管理 一般网站 中获得代码，如下，其中data-uid 即为所需 uid</li></ul></blockquote><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">&lt;!-- 来必力City版安装代码 --&gt;</div><div class="line">&lt;div id=<span class="string">"lv-container"</span> data-id=<span class="string">"city"</span> data-uid=<span class="string">"申请成功后会获得"</span>&gt;</div><div class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</div><div class="line">   (function(d, s) &#123;</div><div class="line">       var j, e = d.getElementsByTagName(s)[<span class="number">0</span>];</div><div class="line"></div><div class="line">       <span class="keyword">if</span> (typeof LivereTower === <span class="string">'function'</span>) &#123; <span class="keyword">return</span>; &#125;</div><div class="line"></div><div class="line">       j = d.createElement(s);</div><div class="line">       j.src = <span class="string">'https://cdn-city.livere.com/js/embed.dist.js'</span>;</div><div class="line">       j.<span class="keyword">async</span> = true;</div><div class="line"></div><div class="line">       e.parentNode.insertBefore(j, e);</div><div class="line">   &#125;)(document, <span class="string">'script'</span>);</div><div class="line">&lt;/script&gt;</div><div class="line">&lt;noscript&gt; 为正常使用来必力评论功能请激活JavaScript&lt;/noscript&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;!-- City版安装代码已完成 --&gt;</div></pre></td></tr></table></figure><blockquote><ul><li><p>在hexo\themes\yilia\layout_partial\post\文件夹下新建一个livere.ejs文件，并将刚才的到的代码复制进去。</p></li><li><p>修改hexo\themes\yilia\layout_partial\article.ejs</p></li><li>找到下述代码</li></ul></blockquote><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;% <span class="keyword">if</span> (!index &amp;&amp; post.comments)&#123; %&gt;</div><div class="line"></div><div class="line">%为方便起见用Ctrl+F快捷查找</div></pre></td></tr></table></figure><blockquote><ul><li>并在后面追加</li></ul></blockquote><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;% <span class="keyword">if</span> (theme.livere_uid)&#123; %&gt;</div><div class="line"> &lt;%- partial(<span class="string">'post/livere'</span>, &#123;</div><div class="line">     key: post.slug,</div><div class="line">     title: post.title,</div><div class="line">     url: config.url+url_for(post.path)</div><div class="line">   &#125;) %&gt;</div><div class="line"> &lt;% &#125; %&gt;</div></pre></td></tr></table></figure><blockquote><ul><li>在主题配置文件_config.yml修改（路径：hexo\themes\yilia）</li></ul></blockquote><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">livere_uid: <span class="string">""</span>%里面是你在注册时得到的data-uid</div></pre></td></tr></table></figure><blockquote><ul><li>运行hexo s或者直接部署 hexo d -g在浏览器查看</li><li>完成  </li></ul></blockquote><h5 id="配置过程中可能会出现问题，尤其在第一步，因为来比力服务器在韩国，因此注册时会遇到一点麻烦，如果无法解决，请留言，博主乐意帮助"><a href="#配置过程中可能会出现问题，尤其在第一步，因为来比力服务器在韩国，因此注册时会遇到一点麻烦，如果无法解决，请留言，博主乐意帮助" class="headerlink" title="配置过程中可能会出现问题，尤其在第一步，因为来比力服务器在韩国，因此注册时会遇到一点麻烦，如果无法解决，请留言，博主乐意帮助"></a>配置过程中可能会出现问题，尤其在第一步，因为来比力服务器在韩国，因此注册时会遇到一点麻烦，如果无法解决，请留言，博主乐意帮助</h5><h4 id="本文作者：-猫君（欢迎转载，请注明出处）"><a href="#本文作者：-猫君（欢迎转载，请注明出处）" class="headerlink" title="本文作者： 猫君（欢迎转载，请注明出处）"></a>本文作者： 猫君（欢迎转载，请注明出处）</h4>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt; 在上一篇提到了友言评论存在一定的问题，而且在得到评论后不能接收提醒，因此在本文将换一种评论，即来比力，具体过程见下。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;受先来到来比力官网注册，管理页面 -&amp;gt; 代码管理 一般网站 中获得代码，如下，其中data-ui
+      
+    
+    </summary>
+    
+    
+      <category term="hexo" scheme="/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo yilia主题友言评论的引入</title>
+    <link href="/2017/09/29/%E5%8F%8B%E8%A8%80%E8%AF%84%E8%AE%BA%E7%9A%84%E5%BC%95%E5%85%A5/"/>
+    <id>/2017/09/29/友言评论的引入/</id>
+    <published>2017-09-29T15:14:17.000Z</published>
+    <updated>2017-10-11T15:09:00.941Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="步骤如下："><a href="#步骤如下：" class="headerlink" title="步骤如下："></a>步骤如下：</h1><h2 id="1-先去友言官网注册并获得插件代码（注意在代码中含有ID记住，后面在-config-yml主题配置中会用到）"><a href="#1-先去友言官网注册并获得插件代码（注意在代码中含有ID记住，后面在-config-yml主题配置中会用到）" class="headerlink" title="1. 先去友言官网注册并获得插件代码（注意在代码中含有ID记住，后面在_config.yml主题配置中会用到）"></a>1. 先去<a href="http://www.uyan.cc" target="_blank" rel="external">友言官网</a>注册并获得插件代码（注意在代码中含有ID记住，后面在_config.yml主题配置中会用到）</h2><h2 id="2-将获得的代码在hexo-themes-yilia-layout-partial-post-文件夹下新建一个uyan-ejs文件，并将刚才的到的代码复制进去。"><a href="#2-将获得的代码在hexo-themes-yilia-layout-partial-post-文件夹下新建一个uyan-ejs文件，并将刚才的到的代码复制进去。" class="headerlink" title="2.将获得的代码在hexo\themes\yilia\layout_partial\post\文件夹下新建一个uyan.ejs文件，并将刚才的到的代码复制进去。"></a>2.将获得的代码在hexo\themes\yilia\layout_partial\post\文件夹下新建一个uyan.ejs文件，并将刚才的到的代码复制进去。</h2><h2 id="3-修改hexo-themes-yilia-layout-partial-article-ejs"><a href="#3-修改hexo-themes-yilia-layout-partial-article-ejs" class="headerlink" title="3.修改hexo\themes\yilia\layout_partial\article.ejs"></a>3.修改hexo\themes\yilia\layout_partial\article.ejs</h2><ul><li>找到</li></ul><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;% <span class="keyword">if</span> (!index &amp;&amp; post.comments)&#123; %&gt;</div><div class="line"></div><div class="line">%为方便起见用Ctrl+F快捷查找</div></pre></td></tr></table></figure><ul><li>找到后在后面追加：</li></ul><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;% <span class="keyword">if</span> (theme.uyan)&#123; %&gt;&lt;%- partial(<span class="string">'post/uyan'</span>, &#123;key: post.slug,title: post.title,url: config.url+url_for(post.path)&#125;) %&gt;&lt;% &#125;</div></pre></td></tr></table></figure><h2 id="4-在主题配置文件-config-yml修改（路径：hexo-themes-yilia）"><a href="#4-在主题配置文件-config-yml修改（路径：hexo-themes-yilia）" class="headerlink" title="4.在主题配置文件_config.yml修改（路径：hexo\themes\yilia）"></a>4.在主题配置文件_config.yml修改（路径：hexo\themes\yilia）</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">uyan: <span class="string">''</span>%里面是你在注册时得到的ID</div></pre></td></tr></table></figure><h2 id="5-运行hexo-s并按照指示在浏览器查看，发现出现评论框，-但是！！-在hexo-d-g部署完成后发现还是-没有评论框。"><a href="#5-运行hexo-s并按照指示在浏览器查看，发现出现评论框，-但是！！-在hexo-d-g部署完成后发现还是-没有评论框。" class="headerlink" title="5.运行hexo s并按照指示在浏览器查看，发现出现评论框， 但是！！ 在hexo d -g部署完成后发现还是 没有评论框。"></a>5.运行hexo s并按照指示在浏览器查看，发现出现评论框， <strong>但是！！</strong> 在hexo d -g部署完成后发现还是 <strong>没有</strong>评论框。</h2><ul><li><strong>这是因为友言并不支持Https，因此在网页加载的时候会被阻断</strong></li></ul><h2 id="6-这时候就需要你-注册域名，在注册域名后你会发现评论框可以正常加载，而且也可以评论"><a href="#6-这时候就需要你-注册域名，在注册域名后你会发现评论框可以正常加载，而且也可以评论" class="headerlink" title="6.这时候就需要你 注册域名，在注册域名后你会发现评论框可以正常加载，而且也可以评论"></a>6.这时候就需要你 <strong>注册域名</strong>，在注册域名后你会发现评论框可以正常加载，而且也可以评论</h2><ul><li>域名和github关联看我上篇文章</li></ul><h2 id="7-本人在亲自尝试后觉得友言并不怎么样，在登录评论过程时往往登录不上。因此有人想评论是评论不了的，因此我决定在后面尝试新的评论功能"><a href="#7-本人在亲自尝试后觉得友言并不怎么样，在登录评论过程时往往登录不上。因此有人想评论是评论不了的，因此我决定在后面尝试新的评论功能" class="headerlink" title="7.本人在亲自尝试后觉得友言并不怎么样，在登录评论过程时往往登录不上。因此有人想评论是评论不了的，因此我决定在后面尝试新的评论功能"></a>7.本人在亲自尝试后觉得友言并不怎么样，在登录评论过程时往往登录不上。因此有人想评论是评论不了的，因此我决定在后面尝试新的评论功能</h2><h4 id="鸣谢：hexo-yilia-添加友言畅言评论支持"><a href="#鸣谢：hexo-yilia-添加友言畅言评论支持" class="headerlink" title="鸣谢：hexo yilia 添加友言畅言评论支持"></a>鸣谢：<a href="http://blog.csdn.net/zxlvxj/article/details/77750068" target="_blank" rel="external">hexo yilia 添加友言畅言评论支持</a></h4><h4 id="本文作者：-猫君（欢迎转载，请注明出处）"><a href="#本文作者：-猫君（欢迎转载，请注明出处）" class="headerlink" title="本文作者： 猫君（欢迎转载，请注明出处）"></a>本文作者： 猫君（欢迎转载，请注明出处）</h4>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;步骤如下：&quot;&gt;&lt;a href=&quot;#步骤如下：&quot; class=&quot;headerlink&quot; title=&quot;步骤如下：&quot;&gt;&lt;/a&gt;步骤如下：&lt;/h1&gt;&lt;h2 id=&quot;1-先去友言官网注册并获得插件代码（注意在代码中含有ID记住，后面在-config-yml主题配置中会用到
+      
+    
+    </summary>
+    
+    
+      <category term="hexo" scheme="/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>域名</title>
+    <link href="/2017/09/28/%E5%9F%9F%E5%90%8D/"/>
+    <id>/2017/09/28/域名/</id>
+    <published>2017-09-28T12:17:11.000Z</published>
+    <updated>2017-09-29T12:12:19.624Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="域名与github关联"><a href="#域名与github关联" class="headerlink" title="域名与github关联"></a>域名与github关联</h1><blockquote><ul><li>1.注册并获得域名</li><li>2.在github已经注册帐号并创建个人仓库</li><li>3.在github个人仓库创建CANME文件 <ul><li>创建CNAME 点击“Create new file”即可（同时将你申请的域名填到下边的大框中如“ghuyt.cn” 。注意：不要www）</li><li>创建后在目录中会出现CNAME文件</li><li>下在整个仓库然后将CNAME文件复制到你电脑的github跟目录中。</li></ul></li><li><img src="/images/1.png" alt="Alt text"></li><li><img src="/images/2.png" alt="Alt text"></li><li><p>4.打开域名管理网站</p><ul><li>注册域名时的网站，找的”我的域名”</li><li>点击解析–&gt;添加记录:<br>1.记录类型选A– 主机记录– www  –线路类型默认–记录值为（电脑dos命令：ping youname.github.io）得到的IP–其他的默认。<br>—- 重复上一步，点击添加记录（总共添加俩次）：<br>2.记录类型选A– 主机记录– @  –线路类型默认–记录值为（电脑dos命令：ping youname.github.io）得到的IP–其他的默认。</li></ul></li><li><p>5.保存后在电脑dos窗口运行： ping 域名  看IP值是否相同，哈哈相同则大功告成.</p><h3 id="参考：http-www-cnblogs-com-calamus-p-7445393-html"><a href="#参考：http-www-cnblogs-com-calamus-p-7445393-html" class="headerlink" title="参考：http://www.cnblogs.com/calamus/p/7445393.html#"></a>参考：<a href="http://www.cnblogs.com/calamus/p/7445393.html#" target="_blank" rel="external">http://www.cnblogs.com/calamus/p/7445393.html#</a></h3><h4 id="本文作者：-猫君"><a href="#本文作者：-猫君" class="headerlink" title="本文作者： 猫君"></a>本文作者： 猫君</h4></li></ul></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;域名与github关联&quot;&gt;&lt;a href=&quot;#域名与github关联&quot; class=&quot;headerlink&quot; title=&quot;域名与github关联&quot;&gt;&lt;/a&gt;域名与github关联&lt;/h1&gt;&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;1.注册并获得域名&lt;/li&gt;
+
+      
+    
+    </summary>
+    
+    
+      <category term="域名" scheme="/tags/%E5%9F%9F%E5%90%8D/"/>
+    
+      <category term="github" scheme="/tags/github/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>点击进入留言板</title>
+    <link href="/2017/09/27/%E7%95%99%E8%A8%80%E6%9D%BF/"/>
+    <id>/2017/09/27/留言板/</id>
+    <published>2017-09-27T11:03:46.000Z</published>
+    <updated>2017-10-07T07:02:41.285Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="小可爱们很高兴在这给我留言"><a href="#小可爱们很高兴在这给我留言" class="headerlink" title="小可爱们很高兴在这给我留言"></a>小可爱们很高兴在这给我留言</h2><h5 id="欢迎在下方留言区进行留言"><a href="#欢迎在下方留言区进行留言" class="headerlink" title="欢迎在下方留言区进行留言"></a>欢迎在下方留言区进行留言</h5><ul><li><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="110" src="//music.163.com/outchain/player?type=0&id=912256078&auto=1&height=90"></iframe></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;小可爱们很高兴在这给我留言&quot;&gt;&lt;a href=&quot;#小可爱们很高兴在这给我留言&quot; class=&quot;headerlink&quot; title=&quot;小可爱们很高兴在这给我留言&quot;&gt;&lt;/a&gt;小可爱们很高兴在这给我留言&lt;/h2&gt;&lt;h5 id=&quot;欢迎在下方留言区进行留言&quot;&gt;&lt;a href
+      
+    
+    </summary>
+    
+    
+      <category term="留言" scheme="/tags/%E7%95%99%E8%A8%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>I want to</title>
+    <link href="/2017/09/27/I-want-to/"/>
+    <id>/2017/09/27/I-want-to/</id>
+    <published>2017-09-27T09:23:32.000Z</published>
+    <updated>2017-09-27T13:47:34.008Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="测试下menu栏随笔功能的实现"><a href="#测试下menu栏随笔功能的实现" class="headerlink" title="测试下menu栏随笔功能的实现"></a>测试下menu栏随笔功能的实现</h1><h2 id="实现方式"><a href="#实现方式" class="headerlink" title="实现方式"></a>实现方式</h2><blockquote><p>在menu里面设置随笔路径<br>随笔: /tags/随笔 其实现方式就是根据自己文档设置的标签提取</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;测试下menu栏随笔功能的实现&quot;&gt;&lt;a href=&quot;#测试下menu栏随笔功能的实现&quot; class=&quot;headerlink&quot; title=&quot;测试下menu栏随笔功能的实现&quot;&gt;&lt;/a&gt;测试下menu栏随笔功能的实现&lt;/h1&gt;&lt;h2 id=&quot;实现方式&quot;&gt;&lt;a href
+      
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+</feed>
