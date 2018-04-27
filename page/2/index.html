@@ -167,20 +167,20 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-servlet-response" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-CSS线性渐变" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/23/servlet-response/">getOutputStream与getWriter方法</a>
+      <a class="article-title" href="/2017/10/15/CSS线性渐变/">CSS线性渐变</a>
     </h1>
   
 
         
-        <a href="/2017/10/23/servlet-response/" class="archive-article-date">
-  	<time datetime="2017-10-23T09:12:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-23</time>
+        <a href="/2017/10/15/CSS线性渐变/" class="archive-article-date">
+  	<time datetime="2017-10-15T02:07:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-15</time>
 </a>
         
       </header>
@@ -192,12 +192,13 @@
 
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="理解"><a href="#理解" class="headerlink" title="理解"></a>理解</h4><blockquote>
-<p>1.getOutputStream方法用于返回Servlet引擎创建的字节输出流对象，Servlet程序可以按字节形式输出响应正文。<br>2.getWriter方法用于返回Servlet引擎创建的字符输出流对象，Servlet程序可以按字符形式输出响应正文。<br>3.getOutputStream和getWriter这两个方法互相排斥，调用了其中的任何一个方法后，就不能再调用另一方法。<br>4.getOutputStream方法返回的字节输出流对象的类型为ServletOutputStream，它可以直接输出字节数组中的二进制数据<br>5.getWriter方法将Servlet引擎的数据缓冲区包装成PrintWriter类型的字符输出流对象后返回，PrintWriter对象可以直接输出字符文本内容。</p>
+        <h2 id="什么是CSS线性渐变"><a href="#什么是CSS线性渐变" class="headerlink" title="什么是CSS线性渐变"></a>什么是CSS线性渐变</h2><h3 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h3><blockquote>
+<p>WebKit 是一个开源的浏览器引擎，基于此内核实现线性渐变在的应用<br>WebKit的优势在于高效稳定，兼容性好，且源码结构清晰，易于维护。</p>
 </blockquote>
-<h4 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h4>
+<h3 id="在WebKit下的实现实例"><a href="#在WebKit下的实现实例" class="headerlink" title="在WebKit下的实现实例"></a>在WebKit下的实现实例</h3><ul>
+<li>代码
         
-          <a class="article-more-a" href="/2017/10/23/servlet-response/#more">  >></a>
+          <a class="article-more-a" href="/2017/10/15/CSS线性渐变/#more">  >></a>
         
       
 
@@ -211,11 +212,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">servlet</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Javaweb</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">html</a>
         		</li>
       		
 		</ul>
@@ -228,7 +229,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/23/servlet-response/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/10/15/CSS线性渐变/">展开全文 >></a>
         </p>
       
 
@@ -258,20 +259,20 @@
 
 
   
-    <article id="post-http协议" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-字节流与字符流" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/20/http协议/">http协议</a>
+      <a class="article-title" href="/2017/10/13/字节流与字符流/">字节流与字符流</a>
     </h1>
   
 
         
-        <a href="/2017/10/20/http协议/" class="archive-article-date">
-  	<time datetime="2017-10-20T08:38:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-20</time>
+        <a href="/2017/10/13/字节流与字符流/" class="archive-article-date">
+  	<time datetime="2017-10-13T10:20:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-13</time>
 </a>
         
       </header>
@@ -283,9 +284,211 @@
 
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="请求头："><a href="#请求头：" class="headerlink" title="请求头："></a>请求头：</h4><blockquote>
-<p>Accept: text/html,image/*   用于告诉服务器客户机支持的数据类型<br>Accept-Charset:ISO-8895-1    告诉服务器 客户机采用的编码<br>Accept-Encoding:gzip,compress   告诉服务器 客户机支持的数据压缩格式<br>Accept-Language:en-us,zh-cn     客户机的语言环境<br>HOST: localhost:8080     告诉服务器 想访问的主机名<br>IF-Modirfied-Since:Tue,11,Jul 2000 18:23:51 GMT 告诉服务器 资源的缓存时间<br>Referer:<a href="http://localhost:8080/a/1.html" target="_blank" rel="external">http://localhost:8080/a/1.html</a>  告诉服务器他是从哪个资源访问的服务器<br>User-Agent:Mozilla/4/0  （compatible，MISE 5.5）告诉服务器 客户机的软件环境<br>Cookie：  可以向服务器带数据<br>Connection:close/keep-Alive<br>Date:Tue,11,Jul 2000 18:23:51 GMT   当前时间</p>
-</blockquote>
+        <h2 id="理解"><a href="#理解" class="headerlink" title="理解"></a>理解</h2><h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><blockquote>
+<p>在java.io包中操作文件内容的主要有两大类：字节流、字符流，两类都分为输入和输出操作。在字节流中输出数据主要是使用<code>OutputStream</code>完成，输入使的是<code>InputStream</code>，在字符流中输出主要是使用<code>Writer</code>类完成，输入流主要使用<code>Reader</code>类完成。（这四个都是抽象类）<br> <code>Reader</code>和 <code>Writer</code>两个是为字符流（一个字符占两个字节）设计的,主要用来处理字符或字符串.</p>
+<h3 id="应用差异"><a href="#应用差异" class="headerlink" title="应用差异"></a>应用差异</h3><ul>
+<li>字符流是由Java虚拟机将字节转化为2个字节为单位的字符而成的，如果是音频文件、图片、歌曲，就用字节流好点，如果是关系到中文（文本）的，用字符流好点；</li>
+<li>用字节流读取中文的时候，可能会出现乱码，而用字符流则不会出现乱码，而且用字符流读取的速度比字节流要快.
+        
+          <a class="article-more-a" href="/2017/10/13/字节流与字符流/#more">  >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">IO</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+<span id="busuanzi_container_page_pv">
+ 	 |阅读量(<span id="busuanzi_value_page_pv"></span>)
+</span>
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/10/13/字节流与字符流/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Jq微博小案例" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/09/Jq微博小案例/">Jq微博小案例</a>
+    </h1>
+  
+
+        
+        <a href="/2017/10/09/Jq微博小案例/" class="archive-article-date">
+  	<time datetime="2017-10-09T11:10:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-09</time>
+</a>
+        
+      </header>
+    
+<!-- 目录内容 -->
+             
+        <!-- 目录内容结束 -->
+
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="利用html，CSS，Jq实现内容提交"><a href="#利用html，CSS，Jq实现内容提交" class="headerlink" title="利用html，CSS，Jq实现内容提交"></a>利用html，CSS，Jq实现内容提交</h4><ul>
+<li>Jq获取文本域的值</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">'textarea'</span>).val();</div></pre></td></tr></table></figure>
+<ul>
+<li>设置初始值为空</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">'textarea'</span>).val(<span class="string">''</span>);</div></pre></td></tr></table></figure>
+<ul>
+<li>去掉前后空格</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$.trim($(<span class="string">'textarea'</span>).val());</div></pre></td></tr></table></figure>
+<ul>
+<li>小案例</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line">&lt;!doctype html&gt;</div><div class="line">&lt;html lang=<span class="string">"en"</span>&gt;</div><div class="line"> &lt;head&gt;</div><div class="line">  &lt;meta http-equiv=<span class="string">"Content-Type"</span> content=<span class="string">"text/html"</span>;charset=<span class="string">"UTF-8"</span>&gt;</div><div class="line">  &lt;title&gt;Document&lt;/title&gt;</div><div class="line">&lt;style type=<span class="string">"text/CSS"</span>&gt;</div><div class="line">	* &#123;margin: <span class="number">0</span>px; padding: <span class="number">0</span>px; list-style: none;&#125;</div><div class="line">	.con &#123;padding: <span class="number">10</span>px; width: <span class="number">600</span>px; margin: <span class="number">100</span>px auto; border:<span class="number">1</span>px solid <span class="comment">#000&#125;</span></div><div class="line">	textarea &#123;width:<span class="number">460</span>px; height:<span class="number">160</span>px;resize:none;&#125;</div><div class="line">	.con ul li &#123;border-bottom: <span class="number">1</span>px dashed <span class="comment">#ccc; line-height:32px;&#125;</span></div><div class="line">	.con ul&#123;width:<span class="number">500</span>px;margin:<span class="number">0</span>px auto;&#125;</div><div class="line">&lt;/style&gt;</div><div class="line">&lt;script type="text/javascript" src="jquery-3.1.1.min.js"&gt;&lt;/script&gt;</div><div class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</div><div class="line">	$(function()&#123;</div><div class="line">	$(<span class="string">'button'</span>).click(function()&#123;</div><div class="line">			var myvalue=$.trim($(<span class="string">'textarea'</span>).val());//获取文本框的值并且去掉前后的空格</div><div class="line">		<span class="keyword">if</span>(myvalue==<span class="string">''</span>)&#123;</div><div class="line">		alert(<span class="string">'内容不能为空'</span>);</div><div class="line">		$(<span class="string">'textarea'</span>).val(<span class="string">''</span>);//为了清除之前的空格</div><div class="line">		&#125;<span class="keyword">else</span> <span class="keyword">if</span>(myvalue.length&gt;<span class="number">120</span>)&#123;</div><div class="line">			alert(<span class="string">"内容不能超过120个字"</span>);</div><div class="line">		&#125;<span class="keyword">else</span>&#123;</div><div class="line">			var myTag=$(<span class="string">'&lt;li&gt; '</span>+myvalue+<span class="string">' &lt;/li&gt;'</span>);</div><div class="line">			$(<span class="string">'.con ul'</span>).prepend(myTag);</div><div class="line">			$(<span class="string">'.con ul li:first'</span>).hide().slideDown();</div><div class="line">			$(<span class="string">'textarea'</span>).val(<span class="string">''</span>);</div><div class="line">		&#125;</div><div class="line">	&#125;)</div><div class="line">	&#125;)</div><div class="line">&lt;/script&gt;</div><div class="line"> &lt;/head&gt;</div><div class="line"> &lt;body&gt;</div><div class="line">	&lt;div class="con"&gt;</div><div class="line">		微博内容：&lt;textarea &gt;&lt;/textarea&gt; &lt;button&gt;发布&lt;/button&gt;&lt;br /&gt;</div><div class="line">		&lt;ul&gt;</div><div class="line">		&lt;/ul&gt;</div><div class="line">	&lt;/div&gt;</div><div class="line"> &lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<h4 id="本文作者：-猫君"><a href="#本文作者：-猫君" class="headerlink" title="本文作者： 猫君"></a>本文作者： 猫君</h4>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Jquery</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Html</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+<span id="busuanzi_container_page_pv">
+ 	 |阅读量(<span id="busuanzi_value_page_pv"></span>)
+</span>
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/10/09/Jq微博小案例/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-电脑输入法无法启动" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/09/电脑输入法无法启动/">电脑输入法桌面上不存在时解决办法</a>
+    </h1>
+  
+
+        
+        <a href="/2017/10/09/电脑输入法无法启动/" class="archive-article-date">
+  	<time datetime="2017-10-09T03:03:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-09</time>
+</a>
+        
+      </header>
+    
+<!-- 目录内容 -->
+             
+        <!-- 目录内容结束 -->
+
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li>1.快捷键CTRL+SHIFT或CTRL+Space</li>
+<li>2.右击任务栏&gt;工具栏&gt;语言栏</li>
+<li>3.运行 C:\Windows\System32\ctfmon.exe</li>
+<li>4.控制面板&gt;区域和语言&gt;</li>
+<li>5.regsvr32 msutb.dll</li>
+<li>6.将 C:\Windows\System32\ctfmon.exe 加入注册- 表启动项或启动文件夹。</li>
+</ul>
 
       
 
@@ -301,10 +504,6 @@
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
         		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">http协议</a>
-        		</li>
       		
 		</ul>
 	</div>
@@ -316,7 +515,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/20/http协议/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/10/09/电脑输入法无法启动/">展开全文 >></a>
         </p>
       
 
@@ -346,20 +545,20 @@
 
 
   
-    <article id="post-反射类构造函数" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-IO流与文件读取" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/16/反射类构造函数/">反射类的构造函数</a>
+      <a class="article-title" href="/2017/10/08/IO流与文件读取/">IO流与文件读取</a>
     </h1>
   
 
         
-        <a href="/2017/10/16/反射类构造函数/" class="archive-article-date">
-  	<time datetime="2017-10-16T10:04:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-16</time>
+        <a href="/2017/10/08/IO流与文件读取/" class="archive-article-date">
+  	<time datetime="2017-10-08T11:17:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-08</time>
 </a>
         
       </header>
@@ -371,12 +570,17 @@
 
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h3><ul>
-<li>在java中私有类的方法访问被外界访问时会被限制，但是用反射类构造函数创建对象访问时可以越过此障碍。</li>
-<li>一般访问公共构造函数可以直接new ###()</li>
+        <h3 id="在这里提供两种导入方式"><a href="#在这里提供两种导入方式" class="headerlink" title="在这里提供两种导入方式"></a>在这里提供两种导入方式</h3><ul>
+<li>第一种对于读取数字和字母读取有效，但是当读取文本是会无法识别</li>
 </ul>
-<h3 id="实例-访问私有构造函数"><a href="#实例-访问私有构造函数" class="headerlink" title="实例(访问私有构造函数)"></a>实例(访问私有构造函数)</h3><p>//暴力反射</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">public void Reflect() throws ClassNotFoundException, SecurityException, NoSuchMethodException, IllegalArgumentException, InstantiationException, IllegalAccessException, InvocationTargetException&#123;</div><div class="line">		Class clazz=Class.forName(&quot;cn.itcast.reflect.First&quot;);</div><div class="line">		Constructor c=clazz.getDeclaredConstructor(null);</div><div class="line">		c.setAccessible(true);</div><div class="line">		 First p=(First) c.newInstance(null);</div><div class="line">		 </div><div class="line">		 </div><div class="line">	&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">public <span class="keyword">static</span> <span class="keyword">void</span> redTest2() throws IOException &#123;<span class="comment">// 这种读取在读取文字时无法识别</span></div><div class="line">		long startTime = System.currentTimeMillis();</div><div class="line">		<span class="comment">// 1 找到目标文件</span></div><div class="line">		File file = <span class="keyword">new</span> File(<span class="string">"E:\\myeclipse\\img\\2.jpg"</span>);</div><div class="line">		<span class="comment">// 2 建立传输通道</span></div><div class="line">		FileInputStream fileInputStream = <span class="keyword">new</span> FileInputStream(file);</div><div class="line">		<span class="comment">// 3 读取文件中的数据</span></div><div class="line">		int content = <span class="number">0</span>;</div><div class="line">		<span class="keyword">while</span> ((content = fileInputStream.read()) != <span class="number">-1</span>) &#123;</div><div class="line"><span class="comment">//			System.out.print((char) content);</span></div><div class="line">		&#125;</div><div class="line">		<span class="comment">// 4 关闭通道</span></div><div class="line">		fileInputStream.close();</div><div class="line">		long stopTime = System.currentTimeMillis();</div><div class="line">		<span class="comment">// 测试读取时间</span></div><div class="line">		System.out.print(<span class="string">"1总时长："</span> + (stopTime - startTime));</div><div class="line">	&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>第二种是针对读取文本、数字、字母或者其他多种数据的一种效率较高的读取方法<ul>
+<li>使用缓冲数组配合循环读取</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">public <span class="keyword">static</span> <span class="keyword">void</span> redTest3() throws IOException &#123;<span class="comment">// 使用缓冲数组配合循环读取</span></div><div class="line">		long startTime = System.currentTimeMillis();</div><div class="line">		<span class="comment">// 1 找到目标文件</span></div><div class="line">		File file = <span class="keyword">new</span> File(<span class="string">"E:\\myeclipse\\img\\2.jpg"</span>);</div><div class="line">		<span class="comment">// 2 建立传输通道</span></div><div class="line">		FileInputStream fileInputStream = <span class="keyword">new</span> FileInputStream(file);</div><div class="line">		<span class="comment">// 3 建立缓冲数组配合循环读取文件中的数据</span></div><div class="line"></div><div class="line">		int length = <span class="number">0</span>;</div><div class="line">		byte[] buf = <span class="keyword">new</span> byte[<span class="number">1024</span>];</div><div class="line">		<span class="keyword">while</span> ((length = fileInputStream.read(buf)) != <span class="number">-1</span>) &#123;</div><div class="line"><span class="comment">//			System.out.print(new String(buf, 0, length));</span></div><div class="line">		&#125;</div><div class="line"></div><div class="line">		<span class="comment">// 4 关闭通道</span></div><div class="line">		fileInputStream.close();</div><div class="line">		long stopTime = System.currentTimeMillis();</div><div class="line">		System.out.print(<span class="string">"2总时长："</span> + (stopTime - startTime));</div><div class="line">	&#125;</div></pre></td></tr></table></figure>
 <h4 id="本文作者：-猫君"><a href="#本文作者：-猫君" class="headerlink" title="本文作者： 猫君"></a>本文作者： 猫君</h4>
       
 
@@ -390,7 +594,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Javaweb</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
         		</li>
       		
 		</ul>
@@ -403,7 +607,130 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/16/反射类构造函数/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/10/08/IO流与文件读取/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-可变参数与增强for循环" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/07/可变参数与增强for循环/">可变参数与增强for循环</a>
+    </h1>
+  
+
+        
+        <a href="/2017/10/07/可变参数与增强for循环/" class="archive-article-date">
+  	<time datetime="2017-10-07T06:17:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-07</time>
+</a>
+        
+      </header>
+    
+<!-- 目录内容 -->
+             
+        <!-- 目录内容结束 -->
+
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h4><ul>
+<li>jdk1.5出现的新特性—-&gt;增强for循环</li>
+</ul>
+<blockquote>
+<ul>
+<li><p>增强for循环的作用： 简化迭代器的书写格式。(注意：增强for循环的底层还是使用了迭代器遍历。)</p>
+</li>
+<li><p>增强for循环的适用范围： 如果是实现了Iterable接口的对象或者是数组对象都可以使用增强for循环。</p>
+</li>
+<li><p>增强for循环的格式：</p>
+</li>
+</ul>
+</blockquote>
+<pre><code>for(数据类型  变量名  :遍历的目标){
+
+}
+</code></pre><ul>
+<li>可变参数</li>
+</ul>
+<blockquote>
+<ul>
+<li>可变参数必须位于形参中的最后一个参数。</li>
+<li>一个函数最多只能有一个可变 参数，因为可变参数要位于形参中最后一个位置上。</li>
+</ul>
+</blockquote>
+<ul>
+<li>通过一个简单的小例子说明可变参数与增强for循环的使用</li>
+</ul>
+<blockquote>
+<ul>
+<li>计算几个数的加和（任意的个数且用一个函数解决）</li>
+</ul>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">public class Demo3 &#123;</div><div class="line">	public static void main(String[] args)&#123;</div><div class="line">		</div><div class="line">		add(<span class="string">"哈哈"</span>,<span class="number">1</span>,<span class="number">3</span>,<span class="number">4</span>);//可以添加任意个数</div><div class="line">	&#125;</div><div class="line">	public static void add(String m,int... arr)&#123;</div><div class="line">		int result=<span class="number">0</span>;</div><div class="line">		<span class="keyword">for</span>(int item:arr)&#123;//增强<span class="keyword">for</span>循环<span class="keyword">for</span>(数据类型  变量名  ：数组)&#123;&#125;</div><div class="line">			result+=item;</div><div class="line">		&#125;</div><div class="line">		System.out.println(result);</div><div class="line">		</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>注意：<ol>
+<li>增强for循环底层也是使用了迭代器获取的，只不过获取迭代器由jvm完成，不需要我们获取迭代器而已，所以在使用增强for循环变量元素的过程中不准使用集合<br>对象对集合的元素个数进行修改。</li>
+<li>迭代器遍历元素与增强for循环变量元素的区别：使用迭代器遍历集合的元素时可以删除集合的元素，而增强for循环变量集合的元素时，不能调用迭代器的remove方法删除元素。</li>
+<li>普通for循环与增强for循环的区别：普通for循环可以没有变量的目标，而增强for循环一定要有变量的目标。</li>
+</ol>
+</li>
+</ul>
+<h4 id="本文作者：-猫君"><a href="#本文作者：-猫君" class="headerlink" title="本文作者： 猫君"></a>本文作者： 猫君</h4>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+<span id="busuanzi_container_page_pv">
+ 	 |阅读量(<span id="busuanzi_value_page_pv"></span>)
+</span>
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/10/07/可变参数与增强for循环/">展开全文 >></a>
         </p>
       
 
@@ -435,7 +762,7 @@
   
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
     </nav>
   
 
