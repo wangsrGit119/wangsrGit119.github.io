@@ -272,9 +272,193 @@
 
 
   
+    <article id="post-四大域" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/27/四大域/">servlet--四大域</a>
+    </h1>
+  
+
+        
+        <a href="/2017/10/27/四大域/" class="archive-article-date">
+  	<time datetime="2017-10-27T06:25:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-27</time>
+</a>
+        
+      </header>
+    
+<!-- 目录内容 -->
+             
+        <!-- 目录内容结束 -->
+
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="一、ServletContext域"><a href="#一、ServletContext域" class="headerlink" title="一、ServletContext域"></a>一、<code>ServletContext</code>域</h4><blockquote>
+<ul>
+<li>1、生命周期：当Web应用被加载进容器时创建代表整个web应用的ServletContext对象，当服务器关闭或Web应用被移除时，ServletContext对象跟着销毁。</li>
+<li>2、作用范围：整个Web应用。</li>
+</ul>
+</blockquote>
+<h4 id="二、Request域"><a href="#二、Request域" class="headerlink" title="二、Request域"></a>二、<code>Request</code>域</h4><blockquote>
+<ul>
+<li>1、生命周期：在service 方法调用前由服务器创建，传入service方法。整个请求
+        
+          <a class="article-more-a" href="/2017/10/27/四大域/#more">  >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">servlet</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+<span id="busuanzi_container_page_pv">
+ 	 |阅读量(<span id="busuanzi_value_page_pv"></span>)
+</span>
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/10/27/四大域/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-servlet-请求转发，重定向" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/24/servlet-请求转发，重定向/">servlet-请求转发，重定向</a>
+    </h1>
+  
+
+        
+        <a href="/2017/10/24/servlet-请求转发，重定向/" class="archive-article-date">
+  	<time datetime="2017-10-24T06:25:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-24</time>
+</a>
+        
+      </header>
+    
+<!-- 目录内容 -->
+             
+        <!-- 目录内容结束 -->
+
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="理解和应用"><a href="#理解和应用" class="headerlink" title="理解和应用"></a>理解和应用</h4><ul>
+<li>请求转发：</li>
+</ul>
+<blockquote>
+<p>浏览器将请求发送给servlet，servlet处理完成后,调用getRequestDispacther()方法:</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">request.getRequestDispatcher(<span class="string">"/1.html"</span>).forward(request, response);</div></pre></td></tr></table></figure>
+<blockquote>
+<p>这个过程被称为一次请求转发，这个过程只涉及一次请求和转发,只有一次
+        
+          <a class="article-more-a" href="/2017/10/24/servlet-请求转发，重定向/#more">  >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">servlet</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+<span id="busuanzi_container_page_pv">
+ 	 |阅读量(<span id="busuanzi_value_page_pv"></span>)
+</span>
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/10/24/servlet-请求转发，重定向/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
     </nav>
   
 
@@ -287,7 +471,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-right">
-    		&copy; 2017 小猫奴
+    		&copy; 2018 小猫奴
     	</div>
       	<div class="footer-right">
       		<a href="javascript:void(0)">welcome to my world&nbsp;</a>
@@ -381,7 +565,11 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color4">CSS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">html</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -394,22 +582,6 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Html</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">CSS</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">javaweb</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">mvc</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">http协议</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -437,11 +609,23 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">留言</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">html</a>
+                <a href="javascript:void(0)" class="js-tag color2">http协议</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">javaweb</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">mvc</a>
               </li>
             
             <div class="clearfix"></div>

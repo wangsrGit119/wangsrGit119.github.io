@@ -167,20 +167,20 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-servlet-请求转发，重定向" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-CSS线性渐变" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/24/servlet-请求转发，重定向/">servlet-请求转发，重定向</a>
+      <a class="article-title" href="/2017/10/15/CSS线性渐变/">CSS线性渐变</a>
     </h1>
   
 
         
-        <a href="/2017/10/24/servlet-请求转发，重定向/" class="archive-article-date">
-  	<time datetime="2017-10-24T06:25:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-24</time>
+        <a href="/2017/10/15/CSS线性渐变/" class="archive-article-date">
+  	<time datetime="2017-10-15T02:07:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-15</time>
 </a>
         
       </header>
@@ -192,17 +192,13 @@
 
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="理解和应用"><a href="#理解和应用" class="headerlink" title="理解和应用"></a>理解和应用</h4><ul>
-<li>请求转发：</li>
-</ul>
-<blockquote>
-<p>浏览器将请求发送给servlet，servlet处理完成后,调用getRequestDispacther()方法:</p>
+        <h2 id="什么是CSS线性渐变"><a href="#什么是CSS线性渐变" class="headerlink" title="什么是CSS线性渐变"></a>什么是CSS线性渐变</h2><h3 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h3><blockquote>
+<p>WebKit 是一个开源的浏览器引擎，基于此内核实现线性渐变在的应用<br>WebKit的优势在于高效稳定，兼容性好，且源码结构清晰，易于维护。</p>
 </blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">request.getRequestDispatcher(<span class="string">"/1.html"</span>).forward(request, response);</div></pre></td></tr></table></figure>
-<blockquote>
-<p>这个过程被称为一次请求转发，这个过程只涉及一次请求和转发,只有一次
+<h3 id="在WebKit下的实现实例"><a href="#在WebKit下的实现实例" class="headerlink" title="在WebKit下的实现实例"></a>在WebKit下的实现实例</h3><ul>
+<li>代码
         
-          <a class="article-more-a" href="/2017/10/24/servlet-请求转发，重定向/#more">  >></a>
+          <a class="article-more-a" href="/2017/10/15/CSS线性渐变/#more">  >></a>
         
       
 
@@ -216,7 +212,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">servlet</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">html</a>
         		</li>
       		
 		</ul>
@@ -229,7 +229,204 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/24/servlet-请求转发，重定向/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/10/15/CSS线性渐变/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-字节流与字符流" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/13/字节流与字符流/">字节流与字符流</a>
+    </h1>
+  
+
+        
+        <a href="/2017/10/13/字节流与字符流/" class="archive-article-date">
+  	<time datetime="2017-10-13T10:20:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-13</time>
+</a>
+        
+      </header>
+    
+<!-- 目录内容 -->
+             
+        <!-- 目录内容结束 -->
+
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="理解"><a href="#理解" class="headerlink" title="理解"></a>理解</h2><h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><blockquote>
+<p>在java.io包中操作文件内容的主要有两大类：字节流、字符流，两类都分为输入和输出操作。在字节流中输出数据主要是使用<code>OutputStream</code>完成，输入使的是<code>InputStream</code>，在字符流中输出主要是使用<code>Writer</code>类完成，输入流主要使用<code>Reader</code>类完成。（这四个都是抽象类）<br> <code>Reader</code>和 <code>Writer</code>两个是为字符流（一个字符占两个字节）设计的,主要用来处理字符或字符串.</p>
+<h3 id="应用差异"><a href="#应用差异" class="headerlink" title="应用差异"></a>应用差异</h3><ul>
+<li>字符流是由Java虚拟机将字节转化为2个字节为单位的字符而成的，如果是音频文件、图片、歌曲，就用字节流好点，如果是关系到中文（文本）的，用字符流好点；</li>
+<li>用字节流读取中文的时候，可能会出现乱码，而用字符流则不会出现乱码，而且用字符流读取的速度比字节流要快.
+        
+          <a class="article-more-a" href="/2017/10/13/字节流与字符流/#more">  >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">IO</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+<span id="busuanzi_container_page_pv">
+ 	 |阅读量(<span id="busuanzi_value_page_pv"></span>)
+</span>
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/10/13/字节流与字符流/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Jq微博小案例" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/09/Jq微博小案例/">Jq微博小案例</a>
+    </h1>
+  
+
+        
+        <a href="/2017/10/09/Jq微博小案例/" class="archive-article-date">
+  	<time datetime="2017-10-09T11:10:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-09</time>
+</a>
+        
+      </header>
+    
+<!-- 目录内容 -->
+             
+        <!-- 目录内容结束 -->
+
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="利用html，CSS，Jq实现内容提交"><a href="#利用html，CSS，Jq实现内容提交" class="headerlink" title="利用html，CSS，Jq实现内容提交"></a>利用html，CSS，Jq实现内容提交</h4><ul>
+<li>Jq获取文本域的值</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">'textarea'</span>).val();</div></pre></td></tr></table></figure>
+<ul>
+<li>设置初始值为空</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">'textarea'</span>).val(<span class="string">''</span>);</div></pre></td></tr></table></figure>
+<ul>
+<li>去掉前后空格</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$.trim($(<span class="string">'textarea'</span>).val());</div></pre></td></tr></table></figure>
+<ul>
+<li>小案例</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line">&lt;!doctype html&gt;</div><div class="line">&lt;html lang=<span class="string">"en"</span>&gt;</div><div class="line"> &lt;head&gt;</div><div class="line">  &lt;meta http-equiv=<span class="string">"Content-Type"</span> content=<span class="string">"text/html"</span>;charset=<span class="string">"UTF-8"</span>&gt;</div><div class="line">  &lt;title&gt;Document&lt;/title&gt;</div><div class="line">&lt;style type=<span class="string">"text/CSS"</span>&gt;</div><div class="line">	* &#123;margin: <span class="number">0</span>px; padding: <span class="number">0</span>px; list-style: none;&#125;</div><div class="line">	.con &#123;padding: <span class="number">10</span>px; width: <span class="number">600</span>px; margin: <span class="number">100</span>px auto; border:<span class="number">1</span>px solid <span class="comment">#000&#125;</span></div><div class="line">	textarea &#123;width:<span class="number">460</span>px; height:<span class="number">160</span>px;resize:none;&#125;</div><div class="line">	.con ul li &#123;border-bottom: <span class="number">1</span>px dashed <span class="comment">#ccc; line-height:32px;&#125;</span></div><div class="line">	.con ul&#123;width:<span class="number">500</span>px;margin:<span class="number">0</span>px auto;&#125;</div><div class="line">&lt;/style&gt;</div><div class="line">&lt;script type="text/javascript" src="jquery-3.1.1.min.js"&gt;&lt;/script&gt;</div><div class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</div><div class="line">	$(function()&#123;</div><div class="line">	$(<span class="string">'button'</span>).click(function()&#123;</div><div class="line">			var myvalue=$.trim($(<span class="string">'textarea'</span>).val());//获取文本框的值并且去掉前后的空格</div><div class="line">		<span class="keyword">if</span>(myvalue==<span class="string">''</span>)&#123;</div><div class="line">		alert(<span class="string">'内容不能为空'</span>);</div><div class="line">		$(<span class="string">'textarea'</span>).val(<span class="string">''</span>);//为了清除之前的空格</div><div class="line">		&#125;<span class="keyword">else</span> <span class="keyword">if</span>(myvalue.length&gt;<span class="number">120</span>)&#123;</div><div class="line">			alert(<span class="string">"内容不能超过120个字"</span>);</div><div class="line">		&#125;<span class="keyword">else</span>&#123;</div><div class="line">			var myTag=$(<span class="string">'&lt;li&gt; '</span>+myvalue+<span class="string">' &lt;/li&gt;'</span>);</div><div class="line">			$(<span class="string">'.con ul'</span>).prepend(myTag);</div><div class="line">			$(<span class="string">'.con ul li:first'</span>).hide().slideDown();</div><div class="line">			$(<span class="string">'textarea'</span>).val(<span class="string">''</span>);</div><div class="line">		&#125;</div><div class="line">	&#125;)</div><div class="line">	&#125;)</div><div class="line">&lt;/script&gt;</div><div class="line"> &lt;/head&gt;</div><div class="line"> &lt;body&gt;</div><div class="line">	&lt;div class="con"&gt;</div><div class="line">		微博内容：&lt;textarea &gt;&lt;/textarea&gt; &lt;button&gt;发布&lt;/button&gt;&lt;br /&gt;</div><div class="line">		&lt;ul&gt;</div><div class="line">		&lt;/ul&gt;</div><div class="line">	&lt;/div&gt;</div><div class="line"> &lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<h4 id="本文作者：-猫君"><a href="#本文作者：-猫君" class="headerlink" title="本文作者： 猫君"></a>本文作者： 猫君</h4>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Jquery</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Html</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+<span id="busuanzi_container_page_pv">
+ 	 |阅读量(<span id="busuanzi_value_page_pv"></span>)
+</span>
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/10/09/Jq微博小案例/">展开全文 >></a>
         </p>
       
 
@@ -261,7 +458,7 @@
   
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
     </nav>
   
 
@@ -274,7 +471,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-right">
-    		&copy; 2017 小猫奴
+    		&copy; 2018 小猫奴
     	</div>
       	<div class="footer-right">
       		<a href="javascript:void(0)">welcome to my world&nbsp;</a>
@@ -368,7 +565,11 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color4">CSS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">html</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -381,22 +582,6 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Html</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">CSS</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">javaweb</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">mvc</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">http协议</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -424,11 +609,23 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">留言</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">html</a>
+                <a href="javascript:void(0)" class="js-tag color2">http协议</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">javaweb</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">mvc</a>
               </li>
             
             <div class="clearfix"></div>

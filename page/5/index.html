@@ -167,20 +167,20 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-http协议" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-来比力评论的引入" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/20/http协议/">http协议</a>
+      <a class="article-title" href="/2017/10/01/来比力评论的引入/">hexo yilia主题 来比力评论的引入</a>
     </h1>
   
 
         
-        <a href="/2017/10/20/http协议/" class="archive-article-date">
-  	<time datetime="2017-10-20T08:38:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-20</time>
+        <a href="/2017/10/01/来比力评论的引入/" class="archive-article-date">
+  	<time datetime="2017-10-01T01:29:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-01</time>
 </a>
         
       </header>
@@ -192,8 +192,239 @@
 
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="请求头："><a href="#请求头：" class="headerlink" title="请求头："></a>请求头：</h4><blockquote>
-<p>Accept: text/html,image/*   用于告诉服务器客户机支持的数据类型<br>Accept-Charset:ISO-8895-1    告诉服务器 客户机采用的编码<br>Accept-Encoding:gzip,compress   告诉服务器 客户机支持的数据压缩格式<br>Accept-Language:en-us,zh-cn     客户机的语言环境<br>HOST: localhost:8080     告诉服务器 想访问的主机名<br>IF-Modirfied-Since:Tue,11,Jul 2000 18:23:51 GMT 告诉服务器 资源的缓存时间<br>Referer:<a href="http://localhost:8080/a/1.html" target="_blank" rel="external">http://localhost:8080/a/1.html</a>  告诉服务器他是从哪个资源访问的服务器<br>User-Agent:Mozilla/4/0  （compatible，MISE 5.5）告诉服务器 客户机的软件环境<br>Cookie：  可以向服务器带数据<br>Connection:close/keep-Alive<br>Date:Tue,11,Jul 2000 18:23:51 GMT   当前时间</p>
+        <p> 在上一篇提到了友言评论存在一定的问题，而且在得到评论后不能接收提醒，因此在本文将换一种评论，即来比力，具体过程见下。</p>
+<blockquote>
+<ul>
+<li>受先来到来比力官网注册，管理页面 -&gt; 代码管理 一般网站 中获得代码，如下，其中data-uid 即为所需 uid</li>
+</ul>
+</blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">&lt;!-- 来必力City版安装代码 --&gt;</div><div class="line">&lt;div id=<span class="string">"lv-container"</span> data-id=<span class="string">"city"</span> data-uid=<span class="string">"申请成功后会获得"</span>&gt;</div><div class="line">	&lt;script type=<span class="string">"text/javascript"</span>&gt;</div><div class="line">   (function(d, s) &#123;</div><div class="line">       var j, e = d.getElementsByTagName(s)[<span class="number">0</span>];</div><div class="line"></div><div class="line">       <span class="keyword">if</span> (typeof LivereTower === <span class="string">'function'</span>) &#123; <span class="keyword">return</span>; &#125;</div><div class="line"></div><div class="line">       j = d.createElement(s);</div><div class="line">       j.src = <span class="string">'https://cdn-city.livere.com/js/embed.dist.js'</span>;</div><div class="line">       j.<span class="keyword">async</span> = true;</div><div class="line"></div><div class="line">       e.parentNode.insertBefore(j, e);</div><div class="line">   &#125;)(document, <span class="string">'script'</span>);</div><div class="line">	&lt;/script&gt;</div><div class="line">&lt;noscript&gt; 为正常使用来必力评论功能请激活JavaScript&lt;/noscript&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;!-- City版安装代码已完成 --&gt;</div></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li><p>在hexo\themes\yilia\layout_partial\post\文件夹下新建一个livere.ejs文件，并将刚才的到的代码复制进去。</p>
+</li>
+<li><p>修改hexo\themes\yilia\layout_partial\article.ejs</p>
+</li>
+<li>找到下述代码</li>
+</ul>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;% <span class="keyword">if</span> (!index &amp;&amp; post.comments)&#123; %&gt;</div><div class="line"></div><div class="line">%为方便起见用Ctrl+F快捷查找</div></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li>并在后面追加</li>
+</ul>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;% <span class="keyword">if</span> (theme.livere_uid)&#123; %&gt;</div><div class="line"> &lt;%- partial(<span class="string">'post/livere'</span>, &#123;</div><div class="line">     key: post.slug,</div><div class="line">     title: post.title,</div><div class="line">     url: config.url+url_for(post.path)</div><div class="line">   &#125;) %&gt;</div><div class="line"> &lt;% &#125; %&gt;</div></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li>在主题配置文件_config.yml修改（路径：hexo\themes\yilia）</li>
+</ul>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">livere_uid: <span class="string">""</span>%里面是你在注册时得到的data-uid</div></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li>运行hexo s或者直接部署 hexo d -g在浏览器查看</li>
+<li>完成  </li>
+</ul>
+</blockquote>
+<h5 id="配置过程中可能会出现问题，尤其在第一步，因为来比力服务器在韩国，因此注册时会遇到一点麻烦，如果无法解决，请留言，博主乐意帮助"><a href="#配置过程中可能会出现问题，尤其在第一步，因为来比力服务器在韩国，因此注册时会遇到一点麻烦，如果无法解决，请留言，博主乐意帮助" class="headerlink" title="配置过程中可能会出现问题，尤其在第一步，因为来比力服务器在韩国，因此注册时会遇到一点麻烦，如果无法解决，请留言，博主乐意帮助"></a>配置过程中可能会出现问题，尤其在第一步，因为来比力服务器在韩国，因此注册时会遇到一点麻烦，如果无法解决，请留言，博主乐意帮助</h5><h4 id="本文作者：-猫君（欢迎转载，请注明出处）"><a href="#本文作者：-猫君（欢迎转载，请注明出处）" class="headerlink" title="本文作者： 猫君（欢迎转载，请注明出处）"></a>本文作者： 猫君（欢迎转载，请注明出处）</h4>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+<span id="busuanzi_container_page_pv">
+ 	 |阅读量(<span id="busuanzi_value_page_pv"></span>)
+</span>
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/10/01/来比力评论的引入/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-友言评论的引入" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/09/29/友言评论的引入/">hexo yilia主题友言评论的引入</a>
+    </h1>
+  
+
+        
+        <a href="/2017/09/29/友言评论的引入/" class="archive-article-date">
+  	<time datetime="2017-09-29T15:14:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-29</time>
+</a>
+        
+      </header>
+    
+<!-- 目录内容 -->
+             
+        <!-- 目录内容结束 -->
+
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="步骤如下："><a href="#步骤如下：" class="headerlink" title="步骤如下："></a>步骤如下：</h1><h2 id="1-先去友言官网注册并获得插件代码（注意在代码中含有ID记住，后面在-config-yml主题配置中会用到）"><a href="#1-先去友言官网注册并获得插件代码（注意在代码中含有ID记住，后面在-config-yml主题配置中会用到）" class="headerlink" title="1. 先去友言官网注册并获得插件代码（注意在代码中含有ID记住，后面在_config.yml主题配置中会用到）"></a>1. 先去<a href="http://www.uyan.cc" target="_blank" rel="external">友言官网</a>注册并获得插件代码（注意在代码中含有ID记住，后面在_config.yml主题配置中会用到）</h2><h2 id="2-将获得的代码在hexo-themes-yilia-layout-partial-post-文件夹下新建一个uyan-ejs文件，并将刚才的到的代码复制进去。"><a href="#2-将获得的代码在hexo-themes-yilia-layout-partial-post-文件夹下新建一个uyan-ejs文件，并将刚才的到的代码复制进去。" class="headerlink" title="2.将获得的代码在hexo\themes\yilia\layout_partial\post\文件夹下新建一个uyan.ejs文件，并将刚才的到的代码复制进去。"></a>2.将获得的代码在hexo\themes\yilia\layout_partial\post\文件夹下新建一个uyan.ejs文件，并将刚才的到的代码复制进去。</h2><h2 id="3-修改hexo-themes-yilia-layout-partial-article-ejs"><a href="#3-修改hexo-themes-yilia-layout-partial-article-ejs" class="headerlink" title="3.修改hexo\themes\yilia\layout_partial\article.ejs"></a>3.修改hexo\themes\yilia\layout_partial\article.ejs</h2><ul>
+<li>找到</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;% <span class="keyword">if</span> (!index &amp;&amp; post.comments)&#123; %&gt;</div><div class="line"></div><div class="line">%为方便起见用Ctrl+F快捷查找</div></pre></td></tr></table></figure>
+<ul>
+<li>找到后在后面追加：</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;% <span class="keyword">if</span> (theme.uyan)&#123; %&gt;&lt;%- partial(<span class="string">'post/uyan'</span>, &#123;key: post.slug,title: post.title,url: config.url+url_for(post.path)&#125;) %&gt;&lt;% &#125;</div></pre></td></tr></table></figure>
+<h2 id="4-在主题配置文件-config-yml修改（路径：hexo-themes-yilia）"><a href="#4-在主题配置文件-config-yml修改（路径：hexo-themes-yilia）" class="headerlink" title="4.在主题配置文件_config.yml修改（路径：hexo\themes\yilia）"></a>4.在主题配置文件_config.yml修改（路径：hexo\themes\yilia）</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">uyan: <span class="string">''</span>%里面是你在注册时得到的ID</div></pre></td></tr></table></figure>
+<h2 id="5-运行hexo-s并按照指示在浏览器查看，发现出现评论框，-但是！！-在hexo-d-g部署完成后发现还是-没有评论框。"><a href="#5-运行hexo-s并按照指示在浏览器查看，发现出现评论框，-但是！！-在hexo-d-g部署完成后发现还是-没有评论框。" class="headerlink" title="5.运行hexo s并按照指示在浏览器查看，发现出现评论框， 但是！！ 在hexo d -g部署完成后发现还是 没有评论框。"></a>5.运行hexo s并按照指示在浏览器查看，发现出现评论框， <strong>但是！！</strong> 在hexo d -g部署完成后发现还是 <strong>没有</strong>评论框。</h2><ul>
+<li><strong>这是因为友言并不支持Https，因此在网页加载的时候会被阻断</strong></li>
+</ul>
+<h2 id="6-这时候就需要你-注册域名，在注册域名后你会发现评论框可以正常加载，而且也可以评论"><a href="#6-这时候就需要你-注册域名，在注册域名后你会发现评论框可以正常加载，而且也可以评论" class="headerlink" title="6.这时候就需要你 注册域名，在注册域名后你会发现评论框可以正常加载，而且也可以评论"></a>6.这时候就需要你 <strong>注册域名</strong>，在注册域名后你会发现评论框可以正常加载，而且也可以评论</h2><ul>
+<li>域名和github关联看我上篇文章</li>
+</ul>
+<h2 id="7-本人在亲自尝试后觉得友言并不怎么样，在登录评论过程时往往登录不上。因此有人想评论是评论不了的，因此我决定在后面尝试新的评论功能"><a href="#7-本人在亲自尝试后觉得友言并不怎么样，在登录评论过程时往往登录不上。因此有人想评论是评论不了的，因此我决定在后面尝试新的评论功能" class="headerlink" title="7.本人在亲自尝试后觉得友言并不怎么样，在登录评论过程时往往登录不上。因此有人想评论是评论不了的，因此我决定在后面尝试新的评论功能"></a>7.本人在亲自尝试后觉得友言并不怎么样，在登录评论过程时往往登录不上。因此有人想评论是评论不了的，因此我决定在后面尝试新的评论功能</h2><h4 id="鸣谢：hexo-yilia-添加友言畅言评论支持"><a href="#鸣谢：hexo-yilia-添加友言畅言评论支持" class="headerlink" title="鸣谢：hexo yilia 添加友言畅言评论支持"></a>鸣谢：<a href="http://blog.csdn.net/zxlvxj/article/details/77750068" target="_blank" rel="external">hexo yilia 添加友言畅言评论支持</a></h4><h4 id="本文作者：-猫君（欢迎转载，请注明出处）"><a href="#本文作者：-猫君（欢迎转载，请注明出处）" class="headerlink" title="本文作者： 猫君（欢迎转载，请注明出处）"></a>本文作者： 猫君（欢迎转载，请注明出处）</h4>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+<span id="busuanzi_container_page_pv">
+ 	 |阅读量(<span id="busuanzi_value_page_pv"></span>)
+</span>
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/09/29/友言评论的引入/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-域名" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/09/28/域名/">域名</a>
+    </h1>
+  
+
+        
+        <a href="/2017/09/28/域名/" class="archive-article-date">
+  	<time datetime="2017-09-28T12:17:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-28</time>
+</a>
+        
+      </header>
+    
+<!-- 目录内容 -->
+             
+        <!-- 目录内容结束 -->
+
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="域名与github关联"><a href="#域名与github关联" class="headerlink" title="域名与github关联"></a>域名与github关联</h1><blockquote>
+<ul>
+<li>1.注册并获得域名</li>
+<li>2.在github已经注册帐号并创建个人仓库</li>
+<li>3.在github个人仓库创建CANME文件 <ul>
+<li>创建CNAME 点击“Create new file”即可（同时将你申请的域名填到下边的大框中如“ghuyt.cn” 。注意：不要www）</li>
+<li>创建后在目录中会出现CNAME文件</li>
+<li>下在整个仓库然后将CNAME文件复制到你电脑的github跟目录中。</li>
+</ul>
+</li>
+<li><img src="/images/1.png" alt="Alt text"></li>
+<li><img src="/images/2.png" alt="Alt text"></li>
+<li><p>4.打开域名管理网站</p>
+<ul>
+<li>注册域名时的网站，找的”我的域名”</li>
+<li>点击解析–&gt;添加记录:<br>1.记录类型选A– 主机记录– www  –线路类型默认–记录值为（电脑dos命令：ping youname.github.io）得到的IP–其他的默认。<br>—- 重复上一步，点击添加记录（总共添加俩次）：<br>2.记录类型选A– 主机记录– @  –线路类型默认–记录值为（电脑dos命令：ping youname.github.io）得到的IP–其他的默认。</li>
+</ul>
+</li>
+<li><p>5.保存后在电脑dos窗口运行： ping 域名  看IP值是否相同，哈哈相同则大功告成.</p>
+<h3 id="参考：http-www-cnblogs-com-calamus-p-7445393-html"><a href="#参考：http-www-cnblogs-com-calamus-p-7445393-html" class="headerlink" title="参考：http://www.cnblogs.com/calamus/p/7445393.html#"></a>参考：<a href="http://www.cnblogs.com/calamus/p/7445393.html#" target="_blank" rel="external">http://www.cnblogs.com/calamus/p/7445393.html#</a></h3><h4 id="本文作者：-猫君"><a href="#本文作者：-猫君" class="headerlink" title="本文作者： 猫君"></a>本文作者： 猫君</h4></li>
+</ul>
 </blockquote>
 
       
@@ -208,11 +439,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">域名</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">http协议</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">github</a>
         		</li>
       		
 		</ul>
@@ -225,7 +456,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/20/http协议/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/09/28/域名/">展开全文 >></a>
         </p>
       
 
@@ -257,7 +488,7 @@
   
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/4/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/6/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/4/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/6/">Next &raquo;</a>
     </nav>
   
 
@@ -270,7 +501,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-right">
-    		&copy; 2017 小猫奴
+    		&copy; 2018 小猫奴
     	</div>
       	<div class="footer-right">
       		<a href="javascript:void(0)">welcome to my world&nbsp;</a>
@@ -364,7 +595,11 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color4">CSS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">html</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -377,22 +612,6 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Html</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">CSS</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">javaweb</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">mvc</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">http协议</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -420,11 +639,23 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">留言</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">html</a>
+                <a href="javascript:void(0)" class="js-tag color2">http协议</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">javaweb</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">mvc</a>
               </li>
             
             <div class="clearfix"></div>

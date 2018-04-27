@@ -167,20 +167,20 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-四大域" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-servlet-response" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/27/四大域/">servlet--四大域</a>
+      <a class="article-title" href="/2017/10/23/servlet-response/">getOutputStream与getWriter方法</a>
     </h1>
   
 
         
-        <a href="/2017/10/27/四大域/" class="archive-article-date">
-  	<time datetime="2017-10-27T06:25:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-27</time>
+        <a href="/2017/10/23/servlet-response/" class="archive-article-date">
+  	<time datetime="2017-10-23T09:12:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-23</time>
 </a>
         
       </header>
@@ -192,17 +192,12 @@
 
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="一、ServletContext域"><a href="#一、ServletContext域" class="headerlink" title="一、ServletContext域"></a>一、<code>ServletContext</code>域</h4><blockquote>
-<ul>
-<li>1、生命周期：当Web应用被加载进容器时创建代表整个web应用的ServletContext对象，当服务器关闭或Web应用被移除时，ServletContext对象跟着销毁。</li>
-<li>2、作用范围：整个Web应用。</li>
-</ul>
+        <h4 id="理解"><a href="#理解" class="headerlink" title="理解"></a>理解</h4><blockquote>
+<p>1.getOutputStream方法用于返回Servlet引擎创建的字节输出流对象，Servlet程序可以按字节形式输出响应正文。<br>2.getWriter方法用于返回Servlet引擎创建的字符输出流对象，Servlet程序可以按字符形式输出响应正文。<br>3.getOutputStream和getWriter这两个方法互相排斥，调用了其中的任何一个方法后，就不能再调用另一方法。<br>4.getOutputStream方法返回的字节输出流对象的类型为ServletOutputStream，它可以直接输出字节数组中的二进制数据<br>5.getWriter方法将Servlet引擎的数据缓冲区包装成PrintWriter类型的字符输出流对象后返回，PrintWriter对象可以直接输出字符文本内容。</p>
 </blockquote>
-<h4 id="二、Request域"><a href="#二、Request域" class="headerlink" title="二、Request域"></a>二、<code>Request</code>域</h4><blockquote>
-<ul>
-<li>1、生命周期：在service 方法调用前由服务器创建，传入service方法。整个请求
+<h4 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h4>
         
-          <a class="article-more-a" href="/2017/10/27/四大域/#more">  >></a>
+          <a class="article-more-a" href="/2017/10/23/servlet-response/#more">  >></a>
         
       
 
@@ -218,6 +213,10 @@
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">servlet</a>
         		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Javaweb</a>
+        		</li>
       		
 		</ul>
 	</div>
@@ -229,7 +228,182 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/27/四大域/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/10/23/servlet-response/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-http协议" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/20/http协议/">http协议</a>
+    </h1>
+  
+
+        
+        <a href="/2017/10/20/http协议/" class="archive-article-date">
+  	<time datetime="2017-10-20T08:38:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-20</time>
+</a>
+        
+      </header>
+    
+<!-- 目录内容 -->
+             
+        <!-- 目录内容结束 -->
+
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="请求头："><a href="#请求头：" class="headerlink" title="请求头："></a>请求头：</h4><blockquote>
+<p>Accept: text/html,image/*   用于告诉服务器客户机支持的数据类型<br>Accept-Charset:ISO-8895-1    告诉服务器 客户机采用的编码<br>Accept-Encoding:gzip,compress   告诉服务器 客户机支持的数据压缩格式<br>Accept-Language:en-us,zh-cn     客户机的语言环境<br>HOST: localhost:8080     告诉服务器 想访问的主机名<br>IF-Modirfied-Since:Tue,11,Jul 2000 18:23:51 GMT 告诉服务器 资源的缓存时间<br>Referer:<a href="http://localhost:8080/a/1.html" target="_blank" rel="external">http://localhost:8080/a/1.html</a>  告诉服务器他是从哪个资源访问的服务器<br>User-Agent:Mozilla/4/0  （compatible，MISE 5.5）告诉服务器 客户机的软件环境<br>Cookie：  可以向服务器带数据<br>Connection:close/keep-Alive<br>Date:Tue,11,Jul 2000 18:23:51 GMT   当前时间</p>
+</blockquote>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">http协议</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+<span id="busuanzi_container_page_pv">
+ 	 |阅读量(<span id="busuanzi_value_page_pv"></span>)
+</span>
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/10/20/http协议/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-反射类构造函数" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/16/反射类构造函数/">反射类的构造函数</a>
+    </h1>
+  
+
+        
+        <a href="/2017/10/16/反射类构造函数/" class="archive-article-date">
+  	<time datetime="2017-10-16T10:04:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-16</time>
+</a>
+        
+      </header>
+    
+<!-- 目录内容 -->
+             
+        <!-- 目录内容结束 -->
+
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h3><ul>
+<li>在java中私有类的方法访问被外界访问时会被限制，但是用反射类构造函数创建对象访问时可以越过此障碍。</li>
+<li>一般访问公共构造函数可以直接new ###()</li>
+</ul>
+<h3 id="实例-访问私有构造函数"><a href="#实例-访问私有构造函数" class="headerlink" title="实例(访问私有构造函数)"></a>实例(访问私有构造函数)</h3><p>//暴力反射</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">public void Reflect() throws ClassNotFoundException, SecurityException, NoSuchMethodException, IllegalArgumentException, InstantiationException, IllegalAccessException, InvocationTargetException&#123;</div><div class="line">		Class clazz=Class.forName(&quot;cn.itcast.reflect.First&quot;);</div><div class="line">		Constructor c=clazz.getDeclaredConstructor(null);</div><div class="line">		c.setAccessible(true);</div><div class="line">		 First p=(First) c.newInstance(null);</div><div class="line">		 </div><div class="line">		 </div><div class="line">	&#125;</div></pre></td></tr></table></figure>
+<h4 id="本文作者：-猫君"><a href="#本文作者：-猫君" class="headerlink" title="本文作者： 猫君"></a>本文作者： 猫君</h4>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Javaweb</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+<span id="busuanzi_container_page_pv">
+ 	 |阅读量(<span id="busuanzi_value_page_pv"></span>)
+</span>
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/10/16/反射类构造函数/">展开全文 >></a>
         </p>
       
 
@@ -261,7 +435,7 @@
   
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
     </nav>
   
 
@@ -274,7 +448,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-right">
-    		&copy; 2017 小猫奴
+    		&copy; 2018 小猫奴
     	</div>
       	<div class="footer-right">
       		<a href="javascript:void(0)">welcome to my world&nbsp;</a>
@@ -368,7 +542,11 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color4">CSS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">html</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -381,22 +559,6 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Html</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">CSS</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">javaweb</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">mvc</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">http协议</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -424,11 +586,23 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">留言</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">html</a>
+                <a href="javascript:void(0)" class="js-tag color2">http协议</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">javaweb</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">mvc</a>
               </li>
             
             <div class="clearfix"></div>

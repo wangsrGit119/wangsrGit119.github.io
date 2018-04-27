@@ -167,20 +167,20 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-servlet-response" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-电脑输入法无法启动" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/23/servlet-response/">getOutputStream与getWriter方法</a>
+      <a class="article-title" href="/2017/10/09/电脑输入法无法启动/">电脑输入法桌面上不存在时解决办法</a>
     </h1>
   
 
         
-        <a href="/2017/10/23/servlet-response/" class="archive-article-date">
-  	<time datetime="2017-10-23T09:12:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-23</time>
+        <a href="/2017/10/09/电脑输入法无法启动/" class="archive-article-date">
+  	<time datetime="2017-10-09T03:03:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-09</time>
 </a>
         
       </header>
@@ -192,13 +192,15 @@
 
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="理解"><a href="#理解" class="headerlink" title="理解"></a>理解</h4><blockquote>
-<p>1.getOutputStream方法用于返回Servlet引擎创建的字节输出流对象，Servlet程序可以按字节形式输出响应正文。<br>2.getWriter方法用于返回Servlet引擎创建的字符输出流对象，Servlet程序可以按字符形式输出响应正文。<br>3.getOutputStream和getWriter这两个方法互相排斥，调用了其中的任何一个方法后，就不能再调用另一方法。<br>4.getOutputStream方法返回的字节输出流对象的类型为ServletOutputStream，它可以直接输出字节数组中的二进制数据<br>5.getWriter方法将Servlet引擎的数据缓冲区包装成PrintWriter类型的字符输出流对象后返回，PrintWriter对象可以直接输出字符文本内容。</p>
-</blockquote>
-<h4 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h4>
-        
-          <a class="article-more-a" href="/2017/10/23/servlet-response/#more">  >></a>
-        
+        <ul>
+<li>1.快捷键CTRL+SHIFT或CTRL+Space</li>
+<li>2.右击任务栏&gt;工具栏&gt;语言栏</li>
+<li>3.运行 C:\Windows\System32\ctfmon.exe</li>
+<li>4.控制面板&gt;区域和语言&gt;</li>
+<li>5.regsvr32 msutb.dll</li>
+<li>6.将 C:\Windows\System32\ctfmon.exe 加入注册- 表启动项或启动文件夹。</li>
+</ul>
+
       
 
       
@@ -211,11 +213,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">servlet</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Javaweb</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
         		</li>
       		
 		</ul>
@@ -228,7 +226,222 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/23/servlet-response/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/10/09/电脑输入法无法启动/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-IO流与文件读取" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/08/IO流与文件读取/">IO流与文件读取</a>
+    </h1>
+  
+
+        
+        <a href="/2017/10/08/IO流与文件读取/" class="archive-article-date">
+  	<time datetime="2017-10-08T11:17:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-08</time>
+</a>
+        
+      </header>
+    
+<!-- 目录内容 -->
+             
+        <!-- 目录内容结束 -->
+
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="在这里提供两种导入方式"><a href="#在这里提供两种导入方式" class="headerlink" title="在这里提供两种导入方式"></a>在这里提供两种导入方式</h3><ul>
+<li>第一种对于读取数字和字母读取有效，但是当读取文本是会无法识别</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">public <span class="keyword">static</span> <span class="keyword">void</span> redTest2() throws IOException &#123;<span class="comment">// 这种读取在读取文字时无法识别</span></div><div class="line">		long startTime = System.currentTimeMillis();</div><div class="line">		<span class="comment">// 1 找到目标文件</span></div><div class="line">		File file = <span class="keyword">new</span> File(<span class="string">"E:\\myeclipse\\img\\2.jpg"</span>);</div><div class="line">		<span class="comment">// 2 建立传输通道</span></div><div class="line">		FileInputStream fileInputStream = <span class="keyword">new</span> FileInputStream(file);</div><div class="line">		<span class="comment">// 3 读取文件中的数据</span></div><div class="line">		int content = <span class="number">0</span>;</div><div class="line">		<span class="keyword">while</span> ((content = fileInputStream.read()) != <span class="number">-1</span>) &#123;</div><div class="line"><span class="comment">//			System.out.print((char) content);</span></div><div class="line">		&#125;</div><div class="line">		<span class="comment">// 4 关闭通道</span></div><div class="line">		fileInputStream.close();</div><div class="line">		long stopTime = System.currentTimeMillis();</div><div class="line">		<span class="comment">// 测试读取时间</span></div><div class="line">		System.out.print(<span class="string">"1总时长："</span> + (stopTime - startTime));</div><div class="line">	&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>第二种是针对读取文本、数字、字母或者其他多种数据的一种效率较高的读取方法<ul>
+<li>使用缓冲数组配合循环读取</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">public <span class="keyword">static</span> <span class="keyword">void</span> redTest3() throws IOException &#123;<span class="comment">// 使用缓冲数组配合循环读取</span></div><div class="line">		long startTime = System.currentTimeMillis();</div><div class="line">		<span class="comment">// 1 找到目标文件</span></div><div class="line">		File file = <span class="keyword">new</span> File(<span class="string">"E:\\myeclipse\\img\\2.jpg"</span>);</div><div class="line">		<span class="comment">// 2 建立传输通道</span></div><div class="line">		FileInputStream fileInputStream = <span class="keyword">new</span> FileInputStream(file);</div><div class="line">		<span class="comment">// 3 建立缓冲数组配合循环读取文件中的数据</span></div><div class="line"></div><div class="line">		int length = <span class="number">0</span>;</div><div class="line">		byte[] buf = <span class="keyword">new</span> byte[<span class="number">1024</span>];</div><div class="line">		<span class="keyword">while</span> ((length = fileInputStream.read(buf)) != <span class="number">-1</span>) &#123;</div><div class="line"><span class="comment">//			System.out.print(new String(buf, 0, length));</span></div><div class="line">		&#125;</div><div class="line"></div><div class="line">		<span class="comment">// 4 关闭通道</span></div><div class="line">		fileInputStream.close();</div><div class="line">		long stopTime = System.currentTimeMillis();</div><div class="line">		System.out.print(<span class="string">"2总时长："</span> + (stopTime - startTime));</div><div class="line">	&#125;</div></pre></td></tr></table></figure>
+<h4 id="本文作者：-猫君"><a href="#本文作者：-猫君" class="headerlink" title="本文作者： 猫君"></a>本文作者： 猫君</h4>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+<span id="busuanzi_container_page_pv">
+ 	 |阅读量(<span id="busuanzi_value_page_pv"></span>)
+</span>
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/10/08/IO流与文件读取/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-可变参数与增强for循环" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/07/可变参数与增强for循环/">可变参数与增强for循环</a>
+    </h1>
+  
+
+        
+        <a href="/2017/10/07/可变参数与增强for循环/" class="archive-article-date">
+  	<time datetime="2017-10-07T06:17:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-07</time>
+</a>
+        
+      </header>
+    
+<!-- 目录内容 -->
+             
+        <!-- 目录内容结束 -->
+
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h4><ul>
+<li>jdk1.5出现的新特性—-&gt;增强for循环</li>
+</ul>
+<blockquote>
+<ul>
+<li><p>增强for循环的作用： 简化迭代器的书写格式。(注意：增强for循环的底层还是使用了迭代器遍历。)</p>
+</li>
+<li><p>增强for循环的适用范围： 如果是实现了Iterable接口的对象或者是数组对象都可以使用增强for循环。</p>
+</li>
+<li><p>增强for循环的格式：</p>
+</li>
+</ul>
+</blockquote>
+<pre><code>for(数据类型  变量名  :遍历的目标){
+
+}
+</code></pre><ul>
+<li>可变参数</li>
+</ul>
+<blockquote>
+<ul>
+<li>可变参数必须位于形参中的最后一个参数。</li>
+<li>一个函数最多只能有一个可变 参数，因为可变参数要位于形参中最后一个位置上。</li>
+</ul>
+</blockquote>
+<ul>
+<li>通过一个简单的小例子说明可变参数与增强for循环的使用</li>
+</ul>
+<blockquote>
+<ul>
+<li>计算几个数的加和（任意的个数且用一个函数解决）</li>
+</ul>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">public class Demo3 &#123;</div><div class="line">	public static void main(String[] args)&#123;</div><div class="line">		</div><div class="line">		add(<span class="string">"哈哈"</span>,<span class="number">1</span>,<span class="number">3</span>,<span class="number">4</span>);//可以添加任意个数</div><div class="line">	&#125;</div><div class="line">	public static void add(String m,int... arr)&#123;</div><div class="line">		int result=<span class="number">0</span>;</div><div class="line">		<span class="keyword">for</span>(int item:arr)&#123;//增强<span class="keyword">for</span>循环<span class="keyword">for</span>(数据类型  变量名  ：数组)&#123;&#125;</div><div class="line">			result+=item;</div><div class="line">		&#125;</div><div class="line">		System.out.println(result);</div><div class="line">		</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>注意：<ol>
+<li>增强for循环底层也是使用了迭代器获取的，只不过获取迭代器由jvm完成，不需要我们获取迭代器而已，所以在使用增强for循环变量元素的过程中不准使用集合<br>对象对集合的元素个数进行修改。</li>
+<li>迭代器遍历元素与增强for循环变量元素的区别：使用迭代器遍历集合的元素时可以删除集合的元素，而增强for循环变量集合的元素时，不能调用迭代器的remove方法删除元素。</li>
+<li>普通for循环与增强for循环的区别：普通for循环可以没有变量的目标，而增强for循环一定要有变量的目标。</li>
+</ol>
+</li>
+</ul>
+<h4 id="本文作者：-猫君"><a href="#本文作者：-猫君" class="headerlink" title="本文作者： 猫君"></a>本文作者： 猫君</h4>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+<span id="busuanzi_container_page_pv">
+ 	 |阅读量(<span id="busuanzi_value_page_pv"></span>)
+</span>
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/10/07/可变参数与增强for循环/">展开全文 >></a>
         </p>
       
 
@@ -260,7 +473,7 @@
   
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/3/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/5/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/3/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/5/">Next &raquo;</a>
     </nav>
   
 
@@ -273,7 +486,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-right">
-    		&copy; 2017 小猫奴
+    		&copy; 2018 小猫奴
     	</div>
       	<div class="footer-right">
       		<a href="javascript:void(0)">welcome to my world&nbsp;</a>
@@ -367,7 +580,11 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color4">CSS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">html</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -380,22 +597,6 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Html</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">CSS</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">javaweb</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">mvc</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">http协议</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -423,11 +624,23 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">留言</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">html</a>
+                <a href="javascript:void(0)" class="js-tag color2">http协议</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">javaweb</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">mvc</a>
               </li>
             
             <div class="clearfix"></div>
