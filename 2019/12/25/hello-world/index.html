@@ -218,48 +218,16 @@
       <br><br>
       
       
-  <!--PC和WAP自适应版-->
-  <div id="SOHUCS" sid='http://yoursite.com/2019/12/25/hello-world/'></div>
-  <script type="text/javascript">
-    (function () {
-      var appid = 'cyuBt6mIS';
-      var conf = 'prod_424bc4e4a4f9716fb69c97a80616c917';
-      var width = window.innerWidth || document.documentElement.clientWidth;
-      if (width < 960) {
-        var head = document.getElementsByTagName('head')[0] || document.head || document.documentElement;
-        var script = document.createElement('script');
-        script.type = 'text/javascript';
-        script.charset = 'utf-8';
-        script.id = 'changyan_mobile_js';
-        script.src = 'https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf;
-        head.appendChild(script);
-      } else {
-        var loadJs = function (d, a) {
-          var c = document.getElementsByTagName('head')[0] || document.head || document.documentElement;
-          var b = document.createElement('script');
-          b.setAttribute('type', 'text/javascript');
-          b.setAttribute('charset', 'UTF-8');
-          b.setAttribute('src', d);
-          if (typeof a === 'function') {
-            if (window.attachEvent) {
-              b.onreadystatechange = function () {
-                var e = b.readyState;
-                if (e === 'loaded' || e === 'complete') {
-                  b.onreadystatechange = null;
-                  a();
-                }
-              };
-            } else {
-              b.onload = a;
-            }
-          }
-          c.appendChild(b);
-        };
-        loadJs('https://changyan.sohu.com/upload/changyan.js', function () {
-          window.changyan.api.config({ appid: appid, conf: conf });
-        });
-      }
-    })(); </script>
+  <script defer src="https://utteranc.es/client.js"
+          repo="wangsrGit119/wangsrGit119.github.io"
+          issue-term="pathname"
+  
+          label="utterances"
+    
+          theme="github-light"
+          crossorigin="anonymous"
+          async>
+  </script>
 
 
     
