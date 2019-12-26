@@ -186,7 +186,7 @@ utterances:
   repo: wangsrGit119/wangsrGit119.github.io
   issue_term: pathname
   label: utterances
-  theme: github-dark-orange
+  theme: github-light
   crossorigin: anonymous
 
 # Disqus
@@ -291,12 +291,12 @@ about:  # 以下仅为页面顶部的基本信息，更多内容请在 ./pages/a
   banner_img: /img/default.png
   banner_img_height: 80  # available: 0 - 100
   avatar: /img/avatar.png # 头像
-  name: myname
-  introduce: info / info / info # 支持 HTML
+  name: suc-浮生
+  introduce: GitHub / QQ  # 支持 HTML / 微信
   icons: # 更多图标可从 https://fontawesome.com/v4.7.0/icons/ 查找，并以 "图标名: url" 的格式添加在下方
-    "fab fa-github": https://github.com
-    "fab fa-twitter": https://twitter.com
-    "fab fa-weixin":  # 微信图标，这个是特殊图标，点击不会跳转而是悬浮二维码，所以链接需要对应二维码图片地址
+    "fab fa-github": https://github.com/wangsrGit119
+    "fab fa-qq": http://wpa.qq.com/msgrd?v=3&uin=1215618342&site=qq&menu=yes
+    #"fab fa-weixin":  # 微信图标，这个是特殊图标，点击不会跳转而是悬浮二维码，所以链接需要对应二维码图片地址
 
 
 #---------------------------
