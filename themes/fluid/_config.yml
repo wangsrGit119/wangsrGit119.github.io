@@ -186,7 +186,7 @@ utterances:
   repo: wangsrGit119/wangsrGit119.github.io
   issue_term: pathname
   label: utterances
-  theme: github-light
+  theme: github-dark-orange
   crossorigin: anonymous
 
 # Disqus
